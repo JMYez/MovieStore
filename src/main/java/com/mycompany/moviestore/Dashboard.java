@@ -107,7 +107,7 @@ public class Dashboard extends javax.swing.JFrame {
         btnwinCatalogoPeliculas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnwinCatalogoPeliculas.setForeground(new java.awt.Color(255, 255, 255));
         btnwinCatalogoPeliculas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/peliculas.png"))); // NOI18N
-        btnwinCatalogoPeliculas.setText("Catálogo ");
+        btnwinCatalogoPeliculas.setText("Catálogo de películas");
         btnwinCatalogoPeliculas.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         btnwinCatalogoPeliculas.setBorderPainted(false);
         btnwinCatalogoPeliculas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
