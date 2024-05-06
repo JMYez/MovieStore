@@ -88,7 +88,7 @@ public class winVentasRealizadas extends javax.swing.JPanel {
                 .addComponent(jPanelContenedorOpcions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+/*asdsdsaddsadsaadssdadsadsadsaddasda */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabelTittle;
