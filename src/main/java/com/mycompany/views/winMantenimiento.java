@@ -2,7 +2,10 @@ package com.mycompany.views;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.util.ArrayList;
 import javax.swing.JPanel;
+import paqClases.moviestore.Peliculas;
+
 
 public class winMantenimiento extends javax.swing.JPanel {
 
@@ -157,7 +160,7 @@ public class winMantenimiento extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanelContenedorOpcion1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 185, 250));
+        jPanelContenedorOpcion1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 185, 250));
 
         jPanelContenedorOpcions.add(jPanelContenedorOpcion1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 185, 250));
 
@@ -297,7 +300,7 @@ public class winMantenimiento extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ShowJPanel(new MantenimientoStock());
+       ShowJPanel(new MantenimientoStock());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
