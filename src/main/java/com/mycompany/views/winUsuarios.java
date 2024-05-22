@@ -227,7 +227,7 @@ public class winUsuarios extends javax.swing.JPanel {
 
         jPanelContenedorOpcion3.setBackground(new java.awt.Color(255, 255, 255));
         jPanelContenedorOpcion3.setLayout(new java.awt.GridBagLayout());
-        jPanelContenedorOpcions.add(jPanelContenedorOpcion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(387, 0, 185, 250));
+        jPanelContenedorOpcions.add(jPanelContenedorOpcion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 185, 250));
 
         jPanelContenedorOpcion4.setBackground(new java.awt.Color(255, 255, 255));
         jPanelContenedorOpcion4.setLayout(new java.awt.GridBagLayout());
