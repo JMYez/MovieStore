@@ -152,25 +152,21 @@ public class winMantenimientoStock extends javax.swing.JPanel {
         txtFechA.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtFechA.setForeground(new java.awt.Color(204, 204, 204));
         txtFechA.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        txtFechA.setMinimumSize(new java.awt.Dimension(64, 24));
 
         txtStock.setBackground(new java.awt.Color(51, 51, 51));
         txtStock.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtStock.setForeground(new java.awt.Color(204, 204, 204));
         txtStock.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        txtStock.setMinimumSize(new java.awt.Dimension(64, 24));
 
         txtCant.setBackground(new java.awt.Color(51, 51, 51));
         txtCant.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtCant.setForeground(new java.awt.Color(204, 204, 204));
         txtCant.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        txtCant.setMinimumSize(new java.awt.Dimension(64, 24));
 
         txtNueStock.setBackground(new java.awt.Color(51, 51, 51));
         txtNueStock.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtNueStock.setForeground(new java.awt.Color(204, 204, 204));
         txtNueStock.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        txtNueStock.setMinimumSize(new java.awt.Dimension(64, 24));
 
         btnBuscar.setBackground(new java.awt.Color(0, 0, 50));
         btnBuscar.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
@@ -220,19 +216,16 @@ public class winMantenimientoStock extends javax.swing.JPanel {
         txtSinp.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtSinp.setForeground(new java.awt.Color(204, 204, 204));
         txtSinp.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        txtSinp.setMinimumSize(new java.awt.Dimension(64, 24));
 
         txtGen.setBackground(new java.awt.Color(51, 51, 51));
         txtGen.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtGen.setForeground(new java.awt.Color(204, 204, 204));
         txtGen.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        txtGen.setMinimumSize(new java.awt.Dimension(64, 24));
 
         txtPeli.setBackground(new java.awt.Color(51, 51, 51));
         txtPeli.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtPeli.setForeground(new java.awt.Color(204, 204, 204));
         txtPeli.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        txtPeli.setMinimumSize(new java.awt.Dimension(64, 24));
 
         txtCodP.setBackground(new java.awt.Color(51, 51, 51));
         txtCodP.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -240,7 +233,6 @@ public class winMantenimientoStock extends javax.swing.JPanel {
         txtCodP.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         txtCodP.setCaretColor(new java.awt.Color(237, 237, 237));
         txtCodP.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        txtCodP.setMinimumSize(new java.awt.Dimension(64, 24));
 
         jSeparator3.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator3.setForeground(new java.awt.Color(21, 100, 192));
@@ -254,9 +246,7 @@ public class winMantenimientoStock extends javax.swing.JPanel {
         txtFechE.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtFechE.setForeground(new java.awt.Color(204, 204, 204));
         txtFechE.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        txtFechE.setMinimumSize(new java.awt.Dimension(64, 24));
 
-        btnGuardar.setBackground(new java.awt.Color(255, 255, 255));
         btnGuardar.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         btnGuardar.setForeground(new java.awt.Color(229, 9, 20));
         btnGuardar.setText("Añadir");
@@ -316,9 +306,8 @@ public class winMantenimientoStock extends javax.swing.JPanel {
                                             .addComponent(txtCant, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                         .addGap(293, 293, 293)
-                                        .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addGap(12, 12, 12))
+                                        .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addGap(12, 302, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -372,9 +361,9 @@ public class winMantenimientoStock extends javax.swing.JPanel {
                             .addComponent(txtFechE, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtNueStock, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtSinp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtSinp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(catalogoSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)

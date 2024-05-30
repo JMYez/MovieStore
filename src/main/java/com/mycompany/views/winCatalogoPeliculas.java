@@ -37,7 +37,6 @@ public class winCatalogoPeliculas extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         content = new javax.swing.JPanel();
         jPanelHeader = new javax.swing.JPanel();
@@ -59,12 +58,6 @@ public class winCatalogoPeliculas extends javax.swing.JPanel {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
-        jPanelContenedorOpcion3 = new javax.swing.JPanel();
-        jPanelContenedorOpcion4 = new javax.swing.JPanel();
-        jPanelContenedorOpcion5 = new javax.swing.JPanel();
-        jPanelContenedorOpcion6 = new javax.swing.JPanel();
-        jPanelContenedorOpcion7 = new javax.swing.JPanel();
-        jPanelContenedorOpcion8 = new javax.swing.JPanel();
 
         content.setBackground(new java.awt.Color(224, 224, 224));
 
@@ -96,7 +89,7 @@ public class winCatalogoPeliculas extends javax.swing.JPanel {
 
         jPanelHeader.add(jPanelTittle, java.awt.BorderLayout.LINE_START);
 
-        jPanelContenedorOpcions.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelContenedorOpcions.setBackground(new java.awt.Color(20, 20, 20));
         jPanelContenedorOpcions.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelContenedorOpcion1.setBackground(new java.awt.Color(21, 101, 192));
@@ -105,9 +98,9 @@ public class winCatalogoPeliculas extends javax.swing.JPanel {
         jPanelContenedorOpcion1.setPreferredSize(new java.awt.Dimension(185, 215));
         jPanelContenedorOpcion1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(21, 101, 192));
+        jPanel2.setBackground(new java.awt.Color(229, 9, 20));
 
-        jLabel4.setBackground(new java.awt.Color(21, 101, 192));
+        jLabel4.setBackground(new java.awt.Color(229, 9, 20));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/venta-peliculas.png"))); // NOI18N
 
@@ -117,7 +110,7 @@ public class winCatalogoPeliculas extends javax.swing.JPanel {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("PELÍCULAS");
 
-        jLabel2.setBackground(new java.awt.Color(21, 101, 192));
+        jLabel2.setBackground(new java.awt.Color(229, 9, 20));
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -155,7 +148,7 @@ public class winCatalogoPeliculas extends javax.swing.JPanel {
         jLabel3.setText("PARA VENDER");
         jPanelContenedorOpcion1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 168, 22));
 
-        jButton1.setBackground(new java.awt.Color(21, 101, 192));
+        jButton1.setBackground(new java.awt.Color(229, 9, 20));
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setFocusPainted(false);
@@ -176,7 +169,7 @@ public class winCatalogoPeliculas extends javax.swing.JPanel {
         jPanelContenedorOpcion2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanelContenedorOpcion2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel4.setBackground(new java.awt.Color(21, 101, 192));
+        jPanel4.setBackground(new java.awt.Color(229, 9, 20));
 
         jLabel7.setBackground(new java.awt.Color(21, 101, 192));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -226,7 +219,7 @@ public class winCatalogoPeliculas extends javax.swing.JPanel {
         jLabel10.setText("PARA ALQUILER");
         jPanelContenedorOpcion2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 168, 22));
 
-        jButton3.setBackground(new java.awt.Color(21, 101, 192));
+        jButton3.setBackground(new java.awt.Color(229, 9, 20));
         jButton3.setBorder(null);
         jButton3.setBorderPainted(false);
         jButton3.setFocusPainted(false);
@@ -241,30 +234,6 @@ public class winCatalogoPeliculas extends javax.swing.JPanel {
         jPanelContenedorOpcion2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 185, 250));
 
         jPanelContenedorOpcions.add(jPanelContenedorOpcion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 0, 185, 250));
-
-        jPanelContenedorOpcion3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelContenedorOpcion3.setLayout(new java.awt.GridBagLayout());
-        jPanelContenedorOpcions.add(jPanelContenedorOpcion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(387, 0, 185, 250));
-
-        jPanelContenedorOpcion4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelContenedorOpcion4.setLayout(new java.awt.GridBagLayout());
-        jPanelContenedorOpcions.add(jPanelContenedorOpcion4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, 185, 250));
-
-        jPanelContenedorOpcion5.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelContenedorOpcion5.setLayout(new java.awt.GridBagLayout());
-        jPanelContenedorOpcions.add(jPanelContenedorOpcion5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 262, 185, 170));
-
-        jPanelContenedorOpcion6.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelContenedorOpcion6.setLayout(new java.awt.GridBagLayout());
-        jPanelContenedorOpcions.add(jPanelContenedorOpcion6, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 262, 185, 170));
-
-        jPanelContenedorOpcion7.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelContenedorOpcion7.setLayout(new java.awt.GridBagLayout());
-        jPanelContenedorOpcions.add(jPanelContenedorOpcion7, new org.netbeans.lib.awtextra.AbsoluteConstraints(387, 262, 185, 170));
-
-        jPanelContenedorOpcion8.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelContenedorOpcion8.setLayout(new java.awt.GridBagLayout());
-        jPanelContenedorOpcions.add(jPanelContenedorOpcion8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 262, 185, 170));
 
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
         content.setLayout(contentLayout);
@@ -315,20 +284,10 @@ public class winCatalogoPeliculas extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelTittle;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel jPanelContenedorOpcion1;
     private javax.swing.JPanel jPanelContenedorOpcion2;
-    private javax.swing.JPanel jPanelContenedorOpcion3;
-    private javax.swing.JPanel jPanelContenedorOpcion4;
-    private javax.swing.JPanel jPanelContenedorOpcion5;
-    private javax.swing.JPanel jPanelContenedorOpcion6;
-    private javax.swing.JPanel jPanelContenedorOpcion7;
-    private javax.swing.JPanel jPanelContenedorOpcion8;
     private javax.swing.JPanel jPanelContenedorOpcions;
     private javax.swing.JPanel jPanelHeader;
     private javax.swing.JPanel jPanelTittle;

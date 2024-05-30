@@ -16,11 +16,16 @@ public class winDisponiblesVender extends javax.swing.JPanel {
         jPanelTittle = new javax.swing.JPanel();
         jLabelTittle = new javax.swing.JLabel();
         jPanelContenedorOpcions = new javax.swing.JPanel();
-        catalogoSearch = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        btnNemo = new javax.swing.JButton();
+        btnYourName = new javax.swing.JButton();
+        btnKungFu = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        btnOppen = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         jPanelContenedor.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -52,15 +57,9 @@ public class winDisponiblesVender extends javax.swing.JPanel {
 
         jPanelHeader.add(jPanelTittle, java.awt.BorderLayout.LINE_START);
 
-        jPanelContenedorOpcions.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelContenedorOpcions.setBackground(new java.awt.Color(20, 20, 20));
 
-        catalogoSearch.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                catalogoSearchActionPerformed(evt);
-            }
-        });
-
-        jButton1.setBackground(new java.awt.Color(0, 0, 50));
+        jButton1.setBackground(new java.awt.Color(204, 0, 51));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/buscar.png"))); // NOI18N
@@ -73,32 +72,7 @@ public class winDisponiblesVender extends javax.swing.JPanel {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Código", "Título", "Género", "Estreno", "Sinopsis", "Costo", "Stock"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.Float.class, java.lang.Integer.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jTable1.setSelectionBackground(new java.awt.Color(0, 0, 50));
-        jTable1.setShowHorizontalLines(true);
-        jTable1.setShowVerticalLines(true);
-        jScrollPane1.setViewportView(jTable1);
-
-        jButton2.setBackground(new java.awt.Color(14, 71, 161));
+        jButton2.setBackground(new java.awt.Color(51, 51, 51));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/actualizar.png"))); // NOI18N
@@ -111,40 +85,104 @@ public class winDisponiblesVender extends javax.swing.JPanel {
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel4.setText("Buscando a Nemo");
+
+        btnNemo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/p_findingnemo_19752_05271d3f (2).jpeg"))); // NOI18N
+        btnNemo.setBorder(null);
+        btnNemo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNemoActionPerformed(evt);
+            }
+        });
+
+        btnYourName.setIcon(new javax.swing.ImageIcon(getClass().getResource("/xq1Ugd62d23K2knRUx6xxuALTZB (1).jpg"))); // NOI18N
+        btnYourName.setBorder(null);
+
+        btnKungFu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/6578f75e84ff5e242268de1f (1).jpg"))); // NOI18N
+        btnKungFu.setBorder(null);
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel5.setText("Kung Fu Panda 4");
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel6.setText("Your Name");
+
+        btnOppen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/71lqDylcvGL._AC_UF894,1000_QL80_ (1) (1).jpg"))); // NOI18N
+        btnOppen.setBorder(null);
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel7.setText("Oppenheimer");
+
         javax.swing.GroupLayout jPanelContenedorOpcionsLayout = new javax.swing.GroupLayout(jPanelContenedorOpcions);
         jPanelContenedorOpcions.setLayout(jPanelContenedorOpcionsLayout);
         jPanelContenedorOpcionsLayout.setHorizontalGroup(
             jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelContenedorOpcionsLayout.createSequentialGroup()
-                .addGap(10, 10, 10)
+                .addGap(21, 21, 21)
                 .addGroup(jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 646, Short.MAX_VALUE)
-                    .addComponent(catalogoSearch))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(10, 10, 10))
+                    .addComponent(btnNemo)
+                    .addComponent(jLabel4))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnYourName)
+                    .addComponent(jLabel6))
+                .addGap(18, 18, 18)
+                .addGroup(jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelContenedorOpcionsLayout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(42, 42, 42))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelContenedorOpcionsLayout.createSequentialGroup()
+                        .addComponent(btnKungFu)
+                        .addGap(18, 18, 18)))
+                .addGroup(jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelContenedorOpcionsLayout.createSequentialGroup()
+                        .addComponent(btnOppen)
+                        .addGap(24, 24, 24)
+                        .addGroup(jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel7))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelContenedorOpcionsLayout.setVerticalGroup(
             jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelContenedorOpcionsLayout.createSequentialGroup()
-                .addGroup(jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
-                    .addComponent(catalogoSearch))
+                .addGap(44, 44, 44)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanelContenedorOpcionsLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
                 .addGroup(jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
                     .addGroup(jPanelContenedorOpcionsLayout.createSequentialGroup()
-                        .addComponent(jButton2)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGroup(jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnNemo)
+                            .addComponent(btnYourName))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanelContenedorOpcionsLayout.createSequentialGroup()
+                        .addGroup(jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnOppen)
+                            .addComponent(btnKungFu))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel4))
+                        .addContainerGap(125, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout jPanelContenedorLayout = new javax.swing.GroupLayout(jPanelContenedor);
         jPanelContenedor.setLayout(jPanelContenedorLayout);
         jPanelContenedorLayout.setHorizontalGroup(
             jPanelContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 789, Short.MAX_VALUE)
+            .addComponent(jPanelHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 803, Short.MAX_VALUE)
             .addComponent(jPanelContenedorOpcions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanelContenedorLayout.setVerticalGroup(
@@ -167,10 +205,6 @@ public class winDisponiblesVender extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void catalogoSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catalogoSearchActionPerformed
-
-    }//GEN-LAST:event_catalogoSearchActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -179,18 +213,27 @@ public class winDisponiblesVender extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void btnNemoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNemoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNemoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField catalogoSearch;
+    private javax.swing.JButton btnKungFu;
+    private javax.swing.JButton btnNemo;
+    private javax.swing.JButton btnOppen;
+    private javax.swing.JButton btnYourName;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabelTittle;
     private javax.swing.JPanel jPanelContenedor;
     private javax.swing.JPanel jPanelContenedorOpcions;
     private javax.swing.JPanel jPanelHeader;
     private javax.swing.JPanel jPanelTittle;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

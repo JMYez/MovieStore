@@ -12,7 +12,7 @@ public class winProcesos extends javax.swing.JPanel {
     }
 
     private void InitStyles() {
-        jLabelTittle.setForeground(Color.black);
+        jLabelTittle.setForeground(Color.gray);
         jPanel2.setOpaque(false);
         jLabel4.setOpaque(false);
         jLabel1.setOpaque(false);
@@ -38,12 +38,13 @@ public class winProcesos extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSeparator2 = new javax.swing.JSeparator();
         jPanel1 = new javax.swing.JPanel();
         content = new javax.swing.JPanel();
         jPanelHeader = new javax.swing.JPanel();
-        jSeparator1 = new javax.swing.JSeparator();
         jPanelTittle = new javax.swing.JPanel();
         jLabelTittle = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
         jPanelContenedorOpcions = new javax.swing.JPanel();
         jPanelContenedorOpcion1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -63,41 +64,45 @@ public class winProcesos extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
-        jPanelContenedorOpcion4 = new javax.swing.JPanel();
         jPanelContenedorOpcion7 = new javax.swing.JPanel();
-        jPanelContenedorOpcion8 = new javax.swing.JPanel();
 
-        content.setBackground(new java.awt.Color(224, 224, 224));
+        content.setBackground(new java.awt.Color(20, 20, 20));
 
         jPanelHeader.setLayout(new java.awt.BorderLayout());
 
-        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
-        jSeparator1.setForeground(new java.awt.Color(21, 100, 192));
-        jPanelHeader.add(jSeparator1, java.awt.BorderLayout.PAGE_END);
+        jPanelTittle.setBackground(new java.awt.Color(20, 20, 20));
 
         jLabelTittle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabelTittle.setForeground(new java.awt.Color(204, 204, 204));
         jLabelTittle.setText("PROCESOS");
+
+        jSeparator1.setBackground(new java.awt.Color(20, 20, 20));
+        jSeparator1.setForeground(new java.awt.Color(204, 204, 204));
 
         javax.swing.GroupLayout jPanelTittleLayout = new javax.swing.GroupLayout(jPanelTittle);
         jPanelTittle.setLayout(jPanelTittleLayout);
         jPanelTittleLayout.setHorizontalGroup(
             jPanelTittleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTittleLayout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+            .addGroup(jPanelTittleLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabelTittle, javax.swing.GroupLayout.PREFERRED_SIZE, 745, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTittleLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 766, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanelTittleLayout.setVerticalGroup(
             jPanelTittleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelTittleLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jLabelTittle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(3, 3, 3)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanelHeader.add(jPanelTittle, java.awt.BorderLayout.LINE_START);
 
-        jPanelContenedorOpcions.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelContenedorOpcions.setBackground(new java.awt.Color(20, 20, 20));
 
         jPanelContenedorOpcion1.setBackground(new java.awt.Color(21, 101, 192));
         jPanelContenedorOpcion1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -105,7 +110,7 @@ public class winProcesos extends javax.swing.JPanel {
         jPanelContenedorOpcion1.setPreferredSize(new java.awt.Dimension(185, 215));
         jPanelContenedorOpcion1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(21, 101, 192));
+        jPanel2.setBackground(new java.awt.Color(229, 9, 20));
 
         jLabel4.setBackground(new java.awt.Color(21, 101, 192));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -148,7 +153,7 @@ public class winProcesos extends javax.swing.JPanel {
 
         jPanelContenedorOpcion1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 180, 140));
 
-        jButton1.setBackground(new java.awt.Color(21, 101, 192));
+        jButton1.setBackground(new java.awt.Color(229, 9, 20));
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setFocusPainted(false);
@@ -166,7 +171,7 @@ public class winProcesos extends javax.swing.JPanel {
         jPanelContenedorOpcion2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanelContenedorOpcion2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel4.setBackground(new java.awt.Color(21, 101, 192));
+        jPanel4.setBackground(new java.awt.Color(229, 9, 20));
 
         jLabel7.setBackground(new java.awt.Color(21, 101, 192));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -209,7 +214,7 @@ public class winProcesos extends javax.swing.JPanel {
 
         jPanelContenedorOpcion2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 180, 140));
 
-        jButton3.setBackground(new java.awt.Color(21, 101, 192));
+        jButton3.setBackground(new java.awt.Color(229, 9, 20));
         jButton3.setBorder(null);
         jButton3.setBorderPainted(false);
         jButton3.setFocusPainted(false);
@@ -226,7 +231,7 @@ public class winProcesos extends javax.swing.JPanel {
         jPanelContenedorOpcion3.setBackground(new java.awt.Color(21, 101, 192));
         jPanelContenedorOpcion3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel5.setBackground(new java.awt.Color(21, 101, 192));
+        jPanel5.setBackground(new java.awt.Color(229, 9, 20));
 
         jLabel10.setBackground(new java.awt.Color(21, 101, 192));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -269,7 +274,7 @@ public class winProcesos extends javax.swing.JPanel {
 
         jPanelContenedorOpcion3.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 180, 140));
 
-        jButton4.setBackground(new java.awt.Color(21, 101, 192));
+        jButton4.setBackground(new java.awt.Color(229, 9, 20));
         jButton4.setBorder(null);
         jButton4.setBorderPainted(false);
         jButton4.setFocusPainted(false);
@@ -283,14 +288,8 @@ public class winProcesos extends javax.swing.JPanel {
         });
         jPanelContenedorOpcion3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 185, 250));
 
-        jPanelContenedorOpcion4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelContenedorOpcion4.setLayout(new java.awt.GridBagLayout());
-
         jPanelContenedorOpcion7.setBackground(new java.awt.Color(21, 101, 192));
         jPanelContenedorOpcion7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanelContenedorOpcion8.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelContenedorOpcion8.setLayout(new java.awt.GridBagLayout());
 
         javax.swing.GroupLayout jPanelContenedorOpcionsLayout = new javax.swing.GroupLayout(jPanelContenedorOpcions);
         jPanelContenedorOpcions.setLayout(jPanelContenedorOpcionsLayout);
@@ -304,15 +303,11 @@ public class winProcesos extends javax.swing.JPanel {
                         .addGap(8, 8, 8)
                         .addComponent(jPanelContenedorOpcion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(8, 8, 8)
-                        .addComponent(jPanelContenedorOpcion3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanelContenedorOpcion4, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanelContenedorOpcion3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelContenedorOpcionsLayout.createSequentialGroup()
                         .addGap(196, 196, 196)
-                        .addComponent(jPanelContenedorOpcion7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanelContenedorOpcion8, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(1, 1, 1))
+                        .addComponent(jPanelContenedorOpcion7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelContenedorOpcionsLayout.setVerticalGroup(
             jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -320,12 +315,10 @@ public class winProcesos extends javax.swing.JPanel {
                 .addGroup(jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanelContenedorOpcion1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanelContenedorOpcion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelContenedorOpcion3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelContenedorOpcion4, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanelContenedorOpcion3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(12, 12, 12)
-                .addGroup(jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelContenedorOpcion7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelContenedorOpcion8, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jPanelContenedorOpcion7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(250, 250, 250))
         );
 
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
@@ -411,12 +404,11 @@ public class winProcesos extends javax.swing.JPanel {
     private javax.swing.JPanel jPanelContenedorOpcion1;
     private javax.swing.JPanel jPanelContenedorOpcion2;
     private javax.swing.JPanel jPanelContenedorOpcion3;
-    private javax.swing.JPanel jPanelContenedorOpcion4;
     private javax.swing.JPanel jPanelContenedorOpcion7;
-    private javax.swing.JPanel jPanelContenedorOpcion8;
     private javax.swing.JPanel jPanelContenedorOpcions;
     private javax.swing.JPanel jPanelHeader;
     private javax.swing.JPanel jPanelTittle;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     // End of variables declaration//GEN-END:variables
 }

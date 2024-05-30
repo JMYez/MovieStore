@@ -107,7 +107,7 @@ appName.setForeground(color);
 
         btnwinInicio.setBackground(new java.awt.Color(0, 0, 0));
         btnwinInicio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnwinInicio.setForeground(new java.awt.Color(48, 47, 48));
+        btnwinInicio.setForeground(new java.awt.Color(255, 255, 255));
         btnwinInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home-outline.png"))); // NOI18N
         btnwinInicio.setText("Inicio");
         btnwinInicio.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
@@ -123,7 +123,7 @@ appName.setForeground(color);
 
         btnwinCatalogoPeliculas.setBackground(new java.awt.Color(0, 0, 0));
         btnwinCatalogoPeliculas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnwinCatalogoPeliculas.setForeground(new java.awt.Color(48, 47, 48));
+        btnwinCatalogoPeliculas.setForeground(new java.awt.Color(255, 255, 255));
         btnwinCatalogoPeliculas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/peliculas.png"))); // NOI18N
         btnwinCatalogoPeliculas.setText("Catálogo de películas");
         btnwinCatalogoPeliculas.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
@@ -140,7 +140,7 @@ appName.setForeground(color);
 
         btnwinUsuarios.setBackground(new java.awt.Color(0, 0, 0));
         btnwinUsuarios.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnwinUsuarios.setForeground(new java.awt.Color(48, 47, 48));
+        btnwinUsuarios.setForeground(new java.awt.Color(255, 255, 255));
         btnwinUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/account-multiple.png"))); // NOI18N
         btnwinUsuarios.setText("Usuarios");
         btnwinUsuarios.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
@@ -156,7 +156,7 @@ appName.setForeground(color);
 
         btnwinProcesos.setBackground(new java.awt.Color(0, 0, 0));
         btnwinProcesos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnwinProcesos.setForeground(new java.awt.Color(48, 47, 48));
+        btnwinProcesos.setForeground(new java.awt.Color(255, 255, 255));
         btnwinProcesos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/procesos.png"))); // NOI18N
         btnwinProcesos.setText("Procesos");
         btnwinProcesos.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
@@ -172,7 +172,7 @@ appName.setForeground(color);
 
         btnwinMantenimiento.setBackground(new java.awt.Color(0, 0, 0));
         btnwinMantenimiento.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnwinMantenimiento.setForeground(new java.awt.Color(48, 47, 48));
+        btnwinMantenimiento.setForeground(new java.awt.Color(255, 255, 255));
         btnwinMantenimiento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mantenimiento.png"))); // NOI18N
         btnwinMantenimiento.setText("Mantenimiento");
         btnwinMantenimiento.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
@@ -188,7 +188,7 @@ appName.setForeground(color);
 
         btnCerrarSesion.setBackground(new java.awt.Color(0, 0, 0));
         btnCerrarSesion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnCerrarSesion.setForeground(new java.awt.Color(48, 47, 48));
+        btnCerrarSesion.setForeground(new java.awt.Color(255, 255, 255));
         btnCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cerrar-sesion.png"))); // NOI18N
         btnCerrarSesion.setText("Salir del sistema");
         btnCerrarSesion.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
@@ -249,9 +249,11 @@ appName.setForeground(color);
         header.setPreferredSize(new java.awt.Dimension(744, 150));
         header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        navText.setForeground(new java.awt.Color(204, 204, 204));
         navText.setText("Administración/Control/Alquiler y Venta de Películas");
         header.add(navText, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 17, -1, -1));
 
+        dateText.setForeground(new java.awt.Color(204, 204, 204));
         dateText.setText("Hoy es {dayname} {day} de {month} de {year}");
         header.add(dateText, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 39, -1, -1));
 
@@ -289,6 +291,7 @@ appName.setForeground(color);
             .addGap(0, 536, Short.MAX_VALUE)
         );
 
+        mensaje.setForeground(new java.awt.Color(204, 204, 204));
         mensaje.setText("Bienvenido a Movie Store");
         mensaje.setEnabled(false);
 

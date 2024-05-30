@@ -12,7 +12,7 @@ public class winUsuarios extends javax.swing.JPanel {
     }
 
     private void InitStyles() {
-        jLabelTittle.setForeground(Color.black);
+        jLabelTittle.setForeground(Color.gray);
         jPanel2.setOpaque(false);
         jLabel4.setOpaque(false);
         jLabel1.setOpaque(false);
@@ -63,15 +63,18 @@ public class winUsuarios extends javax.swing.JPanel {
         jPanelContenedorOpcion7 = new javax.swing.JPanel();
         jPanelContenedorOpcion8 = new javax.swing.JPanel();
 
-        content.setBackground(new java.awt.Color(224, 224, 224));
+        content.setBackground(new java.awt.Color(20, 20, 20));
 
         jPanelHeader.setLayout(new java.awt.BorderLayout());
 
-        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
-        jSeparator1.setForeground(new java.awt.Color(21, 100, 192));
+        jSeparator1.setBackground(new java.awt.Color(20, 20, 20));
+        jSeparator1.setForeground(new java.awt.Color(204, 204, 204));
         jPanelHeader.add(jSeparator1, java.awt.BorderLayout.PAGE_END);
 
+        jPanelTittle.setBackground(new java.awt.Color(20, 20, 20));
+
         jLabelTittle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabelTittle.setForeground(new java.awt.Color(204, 204, 204));
         jLabelTittle.setText("USUARIOS");
 
         javax.swing.GroupLayout jPanelTittleLayout = new javax.swing.GroupLayout(jPanelTittle);
@@ -93,7 +96,7 @@ public class winUsuarios extends javax.swing.JPanel {
 
         jPanelHeader.add(jPanelTittle, java.awt.BorderLayout.LINE_START);
 
-        jPanelContenedorOpcions.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelContenedorOpcions.setBackground(new java.awt.Color(20, 20, 20));
         jPanelContenedorOpcions.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelContenedorOpcion1.setBackground(new java.awt.Color(21, 101, 192));
@@ -102,7 +105,7 @@ public class winUsuarios extends javax.swing.JPanel {
         jPanelContenedorOpcion1.setPreferredSize(new java.awt.Dimension(185, 215));
         jPanelContenedorOpcion1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(21, 101, 192));
+        jPanel2.setBackground(new java.awt.Color(229, 9, 20));
 
         jLabel4.setBackground(new java.awt.Color(21, 101, 192));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -145,7 +148,7 @@ public class winUsuarios extends javax.swing.JPanel {
 
         jPanelContenedorOpcion1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 180, 140));
 
-        jButton1.setBackground(new java.awt.Color(21, 101, 192));
+        jButton1.setBackground(new java.awt.Color(229, 9, 20));
         jButton1.setBorder(null);
         jButton1.setBorderPainted(false);
         jButton1.setFocusPainted(false);
@@ -166,7 +169,7 @@ public class winUsuarios extends javax.swing.JPanel {
         jPanelContenedorOpcion2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanelContenedorOpcion2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel4.setBackground(new java.awt.Color(21, 101, 192));
+        jPanel4.setBackground(new java.awt.Color(229, 9, 20));
 
         jLabel7.setBackground(new java.awt.Color(21, 101, 192));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -209,7 +212,7 @@ public class winUsuarios extends javax.swing.JPanel {
 
         jPanelContenedorOpcion2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 180, 140));
 
-        jButton3.setBackground(new java.awt.Color(21, 101, 192));
+        jButton3.setBackground(new java.awt.Color(229, 9, 20));
         jButton3.setBorder(null);
         jButton3.setBorderPainted(false);
         jButton3.setFocusPainted(false);
@@ -225,27 +228,27 @@ public class winUsuarios extends javax.swing.JPanel {
 
         jPanelContenedorOpcions.add(jPanelContenedorOpcion2, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 0, 185, 250));
 
-        jPanelContenedorOpcion3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelContenedorOpcion3.setBackground(new java.awt.Color(20, 20, 20));
         jPanelContenedorOpcion3.setLayout(new java.awt.GridBagLayout());
         jPanelContenedorOpcions.add(jPanelContenedorOpcion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, 185, 250));
 
-        jPanelContenedorOpcion4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelContenedorOpcion4.setBackground(new java.awt.Color(20, 20, 20));
         jPanelContenedorOpcion4.setLayout(new java.awt.GridBagLayout());
         jPanelContenedorOpcions.add(jPanelContenedorOpcion4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 0, 185, 250));
 
-        jPanelContenedorOpcion5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelContenedorOpcion5.setBackground(new java.awt.Color(20, 20, 20));
         jPanelContenedorOpcion5.setLayout(new java.awt.GridBagLayout());
         jPanelContenedorOpcions.add(jPanelContenedorOpcion5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 262, 185, 170));
 
-        jPanelContenedorOpcion6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelContenedorOpcion6.setBackground(new java.awt.Color(20, 20, 20));
         jPanelContenedorOpcion6.setLayout(new java.awt.GridBagLayout());
         jPanelContenedorOpcions.add(jPanelContenedorOpcion6, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 262, 185, 170));
 
-        jPanelContenedorOpcion7.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelContenedorOpcion7.setBackground(new java.awt.Color(20, 20, 20));
         jPanelContenedorOpcion7.setLayout(new java.awt.GridBagLayout());
         jPanelContenedorOpcions.add(jPanelContenedorOpcion7, new org.netbeans.lib.awtextra.AbsoluteConstraints(387, 262, 185, 170));
 
-        jPanelContenedorOpcion8.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelContenedorOpcion8.setBackground(new java.awt.Color(20, 20, 20));
         jPanelContenedorOpcion8.setLayout(new java.awt.GridBagLayout());
         jPanelContenedorOpcions.add(jPanelContenedorOpcion8, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 262, 185, 170));
 
