@@ -31,6 +31,7 @@ public class winAlquileresRealizados extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         jPanelTittle = new javax.swing.JPanel();
         jLabelTittle = new javax.swing.JLabel();
+        winDisponiblesVender1 = new com.mycompany.views.winDisponiblesVender();
 
         jPanelContenedorOpcions.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -38,11 +39,11 @@ public class winAlquileresRealizados extends javax.swing.JPanel {
         jPanelContenedorOpcions.setLayout(jPanelContenedorOpcionsLayout);
         jPanelContenedorOpcionsLayout.setHorizontalGroup(
             jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 757, Short.MAX_VALUE)
+            .addGap(0, 865, Short.MAX_VALUE)
         );
         jPanelContenedorOpcionsLayout.setVerticalGroup(
             jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 239, Short.MAX_VALUE)
+            .addGap(0, 586, Short.MAX_VALUE)
         );
 
         jPanelHeader.setLayout(new java.awt.BorderLayout());
@@ -77,8 +78,13 @@ public class winAlquileresRealizados extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 757, Short.MAX_VALUE)
+            .addComponent(jPanelHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 865, Short.MAX_VALUE)
             .addComponent(jPanelContenedorOpcions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(winDisponiblesVender1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -86,6 +92,11 @@ public class winAlquileresRealizados extends javax.swing.JPanel {
                 .addComponent(jPanelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanelContenedorOpcions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(winDisponiblesVender1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -96,5 +107,6 @@ public class winAlquileresRealizados extends javax.swing.JPanel {
     private javax.swing.JPanel jPanelHeader;
     private javax.swing.JPanel jPanelTittle;
     private javax.swing.JSeparator jSeparator1;
+    private com.mycompany.views.winDisponiblesVender winDisponiblesVender1;
     // End of variables declaration//GEN-END:variables
 }

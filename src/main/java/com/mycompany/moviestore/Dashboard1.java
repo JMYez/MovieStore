@@ -50,8 +50,8 @@ appName.setForeground(color);
     }
     
     private void InitContent(){
-                btnwinInicio.setBackground(Color.BLACK);
-              btnCerrarSesion.setVisible(false);
+                btnwinInicio.setBackground(new Color(0xE50914));
+              btnCerrarSesion.setVisible(true);
         ShowJPanel(new winInicio());
     }
     
@@ -408,7 +408,7 @@ appName.setForeground(color);
     }//GEN-LAST:event_btnwinMantenimientoActionPerformed
 
     private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
-
+        
         this.dispose();
     }//GEN-LAST:event_btnCerrarSesionActionPerformed
 

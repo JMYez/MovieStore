@@ -107,7 +107,7 @@ appName.setForeground(color);
 
         btnwinInicio.setBackground(new java.awt.Color(0, 0, 0));
         btnwinInicio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnwinInicio.setForeground(new java.awt.Color(255, 255, 255));
+        btnwinInicio.setForeground(new java.awt.Color(102, 102, 102));
         btnwinInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home-outline.png"))); // NOI18N
         btnwinInicio.setText("Inicio");
         btnwinInicio.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
@@ -123,7 +123,7 @@ appName.setForeground(color);
 
         btnwinCatalogoPeliculas.setBackground(new java.awt.Color(0, 0, 0));
         btnwinCatalogoPeliculas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnwinCatalogoPeliculas.setForeground(new java.awt.Color(255, 255, 255));
+        btnwinCatalogoPeliculas.setForeground(new java.awt.Color(102, 102, 102));
         btnwinCatalogoPeliculas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/peliculas.png"))); // NOI18N
         btnwinCatalogoPeliculas.setText("Catálogo de películas");
         btnwinCatalogoPeliculas.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
@@ -140,7 +140,7 @@ appName.setForeground(color);
 
         btnwinUsuarios.setBackground(new java.awt.Color(0, 0, 0));
         btnwinUsuarios.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnwinUsuarios.setForeground(new java.awt.Color(255, 255, 255));
+        btnwinUsuarios.setForeground(new java.awt.Color(102, 102, 102));
         btnwinUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/account-multiple.png"))); // NOI18N
         btnwinUsuarios.setText("Usuarios");
         btnwinUsuarios.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
@@ -156,7 +156,7 @@ appName.setForeground(color);
 
         btnwinProcesos.setBackground(new java.awt.Color(0, 0, 0));
         btnwinProcesos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnwinProcesos.setForeground(new java.awt.Color(255, 255, 255));
+        btnwinProcesos.setForeground(new java.awt.Color(102, 102, 102));
         btnwinProcesos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/procesos.png"))); // NOI18N
         btnwinProcesos.setText("Procesos");
         btnwinProcesos.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
@@ -172,7 +172,7 @@ appName.setForeground(color);
 
         btnwinMantenimiento.setBackground(new java.awt.Color(0, 0, 0));
         btnwinMantenimiento.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnwinMantenimiento.setForeground(new java.awt.Color(255, 255, 255));
+        btnwinMantenimiento.setForeground(new java.awt.Color(102, 102, 102));
         btnwinMantenimiento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mantenimiento.png"))); // NOI18N
         btnwinMantenimiento.setText("Mantenimiento");
         btnwinMantenimiento.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
@@ -188,7 +188,7 @@ appName.setForeground(color);
 
         btnCerrarSesion.setBackground(new java.awt.Color(0, 0, 0));
         btnCerrarSesion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnCerrarSesion.setForeground(new java.awt.Color(255, 255, 255));
+        btnCerrarSesion.setForeground(new java.awt.Color(102, 102, 102));
         btnCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cerrar-sesion.png"))); // NOI18N
         btnCerrarSesion.setText("Salir del sistema");
         btnCerrarSesion.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
