@@ -72,6 +72,7 @@ public class Dashboard extends javax.swing.JFrame {
         navText = new javax.swing.JLabel();
         dateText = new javax.swing.JLabel();
         content = new javax.swing.JPanel();
+        btniniciarsesion = new javax.swing.JButton();
         mensaje = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -82,6 +83,7 @@ public class Dashboard extends javax.swing.JFrame {
         background.setPreferredSize(new java.awt.Dimension(1080, 680));
 
         menu.setBackground(new java.awt.Color(13, 71, 161));
+        menu.setEnabled(false);
         menu.setPreferredSize(new java.awt.Dimension(270, 640));
 
         appName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -224,6 +226,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         header.setBackground(new java.awt.Color(25, 118, 210));
+        header.setEnabled(false);
         header.setPreferredSize(new java.awt.Dimension(744, 150));
         header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -234,22 +237,39 @@ public class Dashboard extends javax.swing.JFrame {
         header.add(dateText, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 39, -1, -1));
 
         content.setBackground(new java.awt.Color(255, 255, 255));
+        content.setEnabled(false);
         content.setMinimumSize(new java.awt.Dimension(810, 430));
         content.setPreferredSize(new java.awt.Dimension(780, 430));
         content.setRequestFocusEnabled(false);
+
+        btniniciarsesion.setBackground(new java.awt.Color(51, 102, 255));
+        btniniciarsesion.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btniniciarsesion.setText("INICIO DE SESION");
+        btniniciarsesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btniniciarsesionActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
         content.setLayout(contentLayout);
         contentLayout.setHorizontalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 810, Short.MAX_VALUE)
+            .addGroup(contentLayout.createSequentialGroup()
+                .addGap(288, 288, 288)
+                .addComponent(btniniciarsesion, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(384, Short.MAX_VALUE))
         );
         contentLayout.setVerticalGroup(
             contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 536, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, contentLayout.createSequentialGroup()
+                .addContainerGap(490, Short.MAX_VALUE)
+                .addComponent(btniniciarsesion, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
         );
 
         mensaje.setText("Bienvenido a Movie Store");
+        mensaje.setEnabled(false);
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
@@ -286,7 +306,7 @@ public class Dashboard extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, 1086, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1086, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -345,6 +365,10 @@ public class Dashboard extends javax.swing.JFrame {
     private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnCerrarSesionActionPerformed
+//8
+    private void btniniciarsesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btniniciarsesionActionPerformed
+       new winIniciarSesion().setVisible(true);
+    }//GEN-LAST:event_btniniciarsesionActionPerformed
 
     public static void main(String args[]) {
         FlatMaterialLighterIJTheme.setup();
@@ -360,8 +384,9 @@ public class Dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel appName;
-    private javax.swing.JPanel background;
+    public javax.swing.JPanel background;
     private javax.swing.JButton btnCerrarSesion;
+    private javax.swing.JButton btniniciarsesion;
     private javax.swing.JButton btnwinCatalogoPeliculas;
     private javax.swing.JButton btnwinInicio;
     private javax.swing.JButton btnwinMantenimiento;

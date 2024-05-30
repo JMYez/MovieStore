@@ -2,10 +2,12 @@ package com.mycompany.moviestore;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class winIniciarSesion extends javax.swing.JFrame {
@@ -216,9 +218,18 @@ public class winIniciarSesion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
+    
     private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
         this.dispose();
-        new Dashboard().setVisible(true);
+        String nombreUsuario = txtNombreUsuario.getText();
+        String password = new String(pwfPassword.getPassword());
+        
+        
+        
+        if (nombreUsuario.equals("Juan Francisco") && password.equals("Vera Castillo")){
+        new Dashboard().setVisible(true);}else{
+         JOptionPane.showMessageDialog(null, "Datos incorrectos, intente de nuevo.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
 
     private void txtNombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreUsuarioActionPerformed
