@@ -227,7 +227,9 @@ public class winIniciarSesion extends javax.swing.JFrame {
         
         
         if (nombreUsuario.equals("Juan Francisco") && password.equals("Vera Castillo")){
-        new Dashboard().setVisible(true);}else{
+         Dashboard dashboard = new Dashboard();
+            dashboard.desbloquearComponentes(); // Desbloquea los componentes del dashboard
+            dashboard.setVisible(true);}else{
          JOptionPane.showMessageDialog(null, "Datos incorrectos, intente de nuevo.", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnIniciarSesionActionPerformed

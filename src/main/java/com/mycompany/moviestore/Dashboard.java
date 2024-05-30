@@ -22,7 +22,24 @@ public class Dashboard extends javax.swing.JFrame {
         SetDate();
         InitContent();
     }
-    
+        public void desbloquearComponentes() {
+        // Activa los botones del menú
+        btnwinInicio.setEnabled(true);
+        btnwinCatalogoPeliculas.setEnabled(true);
+        btnwinUsuarios.setEnabled(true);
+        btnwinProcesos.setEnabled(true);
+        btnwinMantenimiento.setEnabled(true);
+        btnCerrarSesion.setEnabled(true);
+    }
+    private void bloquearComponentes() {
+    btnwinInicio.setEnabled(false);
+    btnwinCatalogoPeliculas.setEnabled(false);
+    btnwinUsuarios.setEnabled(false);
+    btnwinProcesos.setEnabled(false);
+    btnwinMantenimiento.setEnabled(false);
+    btnCerrarSesion.setEnabled(false);
+}
+
     private void InitStyles() {
         mensaje.putClientProperty( "FlatLaf.styleClass", "h1" );
         mensaje.setForeground(Color.black);
@@ -365,22 +382,22 @@ public class Dashboard extends javax.swing.JFrame {
     private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
         this.dispose();
     }//GEN-LAST:event_btnCerrarSesionActionPerformed
-//8
+//
     private void btniniciarsesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btniniciarsesionActionPerformed
        new winIniciarSesion().setVisible(true);
     }//GEN-LAST:event_btniniciarsesionActionPerformed
 
     public static void main(String args[]) {
-        FlatMaterialLighterIJTheme.setup();
-        UIManager.put( "Button.arc", 999 );
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Dashboard().setVisible(false);
-                winIniciarSesion loginFrame = new winIniciarSesion();
-                loginFrame.setVisible(true);
-            }
-        });
-    }
+    FlatMaterialLighterIJTheme.setup();
+    UIManager.put( "Button.arc", 999 );
+    java.awt.EventQueue.invokeLater(new Runnable() {
+        public void run() {
+            Dashboard dashboard = new Dashboard();
+            dashboard.bloquearComponentes(); // Bloquea los componentes al inicio
+            dashboard.setVisible(true);
+        }
+    });
+}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel appName;
