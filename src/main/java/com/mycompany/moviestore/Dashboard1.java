@@ -15,9 +15,9 @@ import java.util.Locale;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 
-public class Dashboard extends javax.swing.JFrame {
+public class Dashboard1 extends javax.swing.JFrame {
 
-    public Dashboard() {
+    public Dashboard1() {
         initComponents();
         InitStyles();
         SetDate();
@@ -89,7 +89,6 @@ appName.setForeground(color);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1080, 680));
-        setPreferredSize(new java.awt.Dimension(1080, 680));
 
         background.setBackground(new java.awt.Color(20, 20, 20));
         background.setPreferredSize(new java.awt.Dimension(1080, 680));
@@ -109,7 +108,7 @@ appName.setForeground(color);
         btnwinInicio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         btnwinInicio.setForeground(new java.awt.Color(48, 47, 48));
         btnwinInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/home-outline.png"))); // NOI18N
-        btnwinInicio.setText("Inicio");
+        btnwinInicio.setText("ssss");
         btnwinInicio.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
         btnwinInicio.setBorderPainted(false);
         btnwinInicio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -415,7 +414,7 @@ appName.setForeground(color);
     UIManager.put( "Button.arc", 999 );
     java.awt.EventQueue.invokeLater(new Runnable() {
         public void run() {
-            Dashboard dashboard = new Dashboard();
+            Dashboard1 dashboard = new Dashboard1();
             dashboard.setVisible(true);
         }
     });
