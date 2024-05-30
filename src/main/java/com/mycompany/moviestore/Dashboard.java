@@ -30,7 +30,7 @@ public class Dashboard extends javax.swing.JFrame {
         btnwinProcesos.setEnabled(true);
         btnwinMantenimiento.setEnabled(true);
         btnCerrarSesion.setEnabled(true);
-    }
+    }//;
     private void bloquearComponentes() {
     btnwinInicio.setEnabled(false);
     btnwinCatalogoPeliculas.setEnabled(false);
