@@ -1,5 +1,5 @@
-package com.mycompany.moviestore;
-//aaaaa
+package views;
+
 import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighterIJTheme;
 import com.mycompany.views.winCatalogoPeliculas;
 import com.mycompany.views.winIniciarSesion;
@@ -15,9 +15,9 @@ import java.util.Locale;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 
-public class Dashboard1 extends javax.swing.JFrame {
+public class DashboardUnlocked extends javax.swing.JFrame {
 
-    public Dashboard1() {
+    public DashboardUnlocked() {
         initComponents();
         InitStyles();
         SetDate();
@@ -80,6 +80,7 @@ appName.setForeground(color);
         btnwinProcesos = new javax.swing.JButton();
         btnwinMantenimiento = new javax.swing.JButton();
         btnCerrarSesion = new javax.swing.JButton();
+        btnwinMantenimiento1 = new javax.swing.JButton();
         header = new javax.swing.JPanel();
         navText = new javax.swing.JLabel();
         dateText = new javax.swing.JLabel();
@@ -201,6 +202,22 @@ appName.setForeground(color);
             }
         });
 
+        btnwinMantenimiento1.setBackground(new java.awt.Color(0, 0, 0));
+        btnwinMantenimiento1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnwinMantenimiento1.setForeground(new java.awt.Color(255, 255, 255));
+        btnwinMantenimiento1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/file-chart.png"))); // NOI18N
+        btnwinMantenimiento1.setText("Reportes");
+        btnwinMantenimiento1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        btnwinMantenimiento1.setBorderPainted(false);
+        btnwinMantenimiento1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnwinMantenimiento1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnwinMantenimiento1.setIconTextGap(10);
+        btnwinMantenimiento1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnwinMantenimiento1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout menuLayout = new javax.swing.GroupLayout(menu);
         menu.setLayout(menuLayout);
         menuLayout.setHorizontalGroup(
@@ -218,7 +235,8 @@ appName.setForeground(color);
                     .addComponent(btnwinUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnwinProcesos, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnwinMantenimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnwinMantenimiento1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         menuLayout.setVerticalGroup(
@@ -238,6 +256,8 @@ appName.setForeground(color);
                 .addComponent(btnwinProcesos, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnwinMantenimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnwinMantenimiento1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -407,11 +427,6 @@ appName.setForeground(color);
         }
     }//GEN-LAST:event_btnwinMantenimientoActionPerformed
 
-    private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
-        
-        this.dispose();
-    }//GEN-LAST:event_btnCerrarSesionActionPerformed
-
     private void btnIniciarSesionMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnIniciarSesionMouseReleased
         // TODO add your handling code here:
     }//GEN-LAST:event_btnIniciarSesionMouseReleased
@@ -420,12 +435,20 @@ appName.setForeground(color);
         ShowJPanel(new winIniciarSesion());
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
 
+    private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnCerrarSesionActionPerformed
+
+    private void btnwinMantenimiento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnwinMantenimiento1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnwinMantenimiento1ActionPerformed
+
     public static void main(String args[]) {
     FlatMaterialLighterIJTheme.setup();
     UIManager.put( "Button.arc", 999 );
     java.awt.EventQueue.invokeLater(new Runnable() {
         public void run() {
-            Dashboard1 dashboard = new Dashboard1();
+            DashboardUnlocked dashboard = new DashboardUnlocked();
             dashboard.setVisible(true);
         }
     });
@@ -439,6 +462,7 @@ appName.setForeground(color);
     private javax.swing.JButton btnwinCatalogoPeliculas;
     private javax.swing.JButton btnwinInicio;
     private javax.swing.JButton btnwinMantenimiento;
+    private javax.swing.JButton btnwinMantenimiento1;
     private javax.swing.JButton btnwinProcesos;
     private javax.swing.JButton btnwinUsuarios;
     private javax.swing.JPanel content;

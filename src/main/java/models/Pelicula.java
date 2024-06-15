@@ -1,9 +1,9 @@
 
-package paqClases.moviestore;
-//a
+package models;
+
 import java.time.LocalDate;
 
-public class Peliculas {
+public class Pelicula {
     public String codigo;
     public String titulo;
     public String genero;
@@ -14,10 +14,10 @@ public class Peliculas {
     public int cantidad;
     public int nueStock;
 
-    public Peliculas() {
+    public Pelicula() {
     }
 
-    public Peliculas(String codigo, String titulo, String genero, LocalDate fechaEstreno, String sinopsis, LocalDate fechaAgregacion, int stock, int cantidad, int nueStock) {
+    public Pelicula(String codigo, String titulo, String genero, LocalDate fechaEstreno, String sinopsis, LocalDate fechaAgregacion, int stock, int cantidad, int nueStock) {
         this.codigo = codigo;
         this.titulo = titulo;
         this.genero = genero;

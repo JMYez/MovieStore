@@ -37,10 +37,10 @@ public class Vender extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         bg = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         labelInput = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
@@ -85,6 +85,16 @@ public class Vender extends javax.swing.JPanel {
 
         bg.setBackground(new java.awt.Color(255, 255, 255));
 
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        labelInput.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        labelInput.setText("Vender películas");
+        jPanel2.add(labelInput, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 670, 23));
+
+        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator1.setForeground(new java.awt.Color(21, 100, 192));
+        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 47, 690, -1));
+
         jButton1.setBackground(new java.awt.Color(14, 71, 161));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -96,16 +106,6 @@ public class Vender extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        labelInput.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        labelInput.setText("Vender películas");
-        jPanel2.add(labelInput, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 670, 23));
-
-        jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
-        jSeparator1.setForeground(new java.awt.Color(21, 100, 192));
-        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 47, 690, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));

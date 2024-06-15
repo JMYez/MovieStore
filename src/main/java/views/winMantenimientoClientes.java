@@ -1,6 +1,7 @@
 
-package com.mycompany.views;
+package views;
 
+import com.mycompany.views.*;
 import java.awt.Color;
 import java.awt.Container;
 import java.util.ArrayList;
@@ -10,16 +11,16 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-import paqClases.moviestore.Clientes;
+import models.Cliente;
 
 public class winMantenimientoClientes extends javax.swing.JPanel {
     
     DefaultTableModel model;
-    ArrayList<Clientes> array;
+    ArrayList<Cliente> array;
     public winMantenimientoClientes() {
         initComponents();
         InitStyles();
-        array = new ArrayList<Clientes>();
+        array = new ArrayList<Cliente>();
         model = new DefaultTableModel(new String[]{"DNI", "Nombre", "Apellido", "Direccion", "Telefono", "Correo"},0);
         tblClie.setModel(model);
         
@@ -132,8 +133,6 @@ public class winMantenimientoClientes extends javax.swing.JPanel {
         });
         tblClie.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         tblClie.setSelectionBackground(new java.awt.Color(0, 0, 50));
-        tblClie.setShowHorizontalLines(true);
-        tblClie.setShowVerticalLines(true);
         jScrollPane1.setViewportView(tblClie);
 
         btnActua.setBackground(new java.awt.Color(0, 51, 51));
@@ -263,19 +262,20 @@ public class winMantenimientoClientes extends javax.swing.JPanel {
                                         .addComponent(ctlBusc, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(btnBusc, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(16, 16, 16)
-                                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(btnActua, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                                    .addComponent(btnElim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(bgLayout.createSequentialGroup()
+                                        .addGap(16, 16, 16)
+                                        .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(btnActua, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                                            .addComponent(btnElim, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addGroup(bgLayout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addGap(0, 61, Short.MAX_VALUE))))
             .addGroup(bgLayout.createSequentialGroup()
                 .addGap(560, 560, 560)
                 .addComponent(btnAñadir, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, bgLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
         );
         bgLayout.setVerticalGroup(
             bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -301,20 +301,20 @@ public class winMantenimientoClientes extends javax.swing.JPanel {
                     .addComponent(txtApe, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnAñadir)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ctlBusc, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBusc, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(bgLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(bgLayout.createSequentialGroup()
                         .addComponent(btnActua, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnElim, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnElim, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(81, 81, 81))
         );
 
         jPanelContenedorOpcions.add(bg, java.awt.BorderLayout.CENTER);
@@ -368,51 +368,53 @@ public class winMantenimientoClientes extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConsulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsulActionPerformed
-        String dni = txtDni.getText();
-        Clientes clie = consultar(dni);
-        if(clie!=null){
-            txtDni.setText(clie.getDni());
-            txtNom.setText(clie.getNombre());
-            txtApe.setText(clie.getApellidos());
-            txtDirec.setText(clie.getDireccion());
-            txtTelef.setText(clie.getTelefono());
-            txtCorreo.setText(clie.getCorreo());
-        }else{
-            JOptionPane.showMessageDialog(null, "Cliente " + dni + "No existe");
+        try {
+            int dni = Integer.parseInt(txtDni.getText());
+            Cliente clie = consultar(dni);
+            if (clie != null) {
+                txtNom.setText(clie.getNombre());
+                txtApe.setText(clie.getApellidos());
+                txtDirec.setText(clie.getDireccion());
+                txtTelef.setText(clie.getTelefono());
+                txtCorreo.setText(clie.getCorreo());
+            } else {
+                JOptionPane.showMessageDialog(null, "Cliente " + dni + " No existe");
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "DNI debe ser un número entero");
         }
     }//GEN-LAST:event_btnConsulActionPerformed
 
     private void btnAñadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAñadirActionPerformed
-        String dni, nom, ape, direc, telef, corr;
-        String datos[] = new String[6];
+        String nom, ape, direc, telef, corr;
+        int dni;
+        try {
+            dni = Integer.parseInt(txtDni.getText());
+            nom = txtNom.getText();
+            ape = txtApe.getText();
+            direc = txtDirec.getText();
+            telef = txtTelef.getText();
+            corr = txtCorreo.getText();
 
-        datos[0] = dni = txtDni.getText();
-        datos[1] = nom = txtNom.getText();
-        datos[2] = ape = txtApe.getText();
-        datos[3] = direc = txtDirec.getText();
-        datos[4] = telef = txtTelef.getText();
-        datos[5] = corr = txtCorreo.getText();
-
-        try{
             // Verificar que todos los campos estén llenos
-            for (String dato : datos) {
-                if (dato.isEmpty()) {
-                    throw new Exception("Todos los campos deben estar llenos");
-                }
+            if (nom.isEmpty() || ape.isEmpty() || direc.isEmpty() || telef.isEmpty() || corr.isEmpty()) {
+                throw new Exception("Todos los campos deben estar llenos");
             }
 
             // Verificar que el DNI tenga 8 dígitos
-            if (dni.length() != 8) {
+            if (String.valueOf(dni).length() != 8) {
                 throw new Exception("El DNI debe tener 8 dígitos");
             }
 
             // Si las verificaciones pasan, se añade el cliente
-            model.addRow(datos);
-            Clientes clie = new Clientes(dni, nom, ape, direc, telef, corr);
+            model.addRow(new Object[]{dni, nom, ape, direc, telef, corr});
+            Cliente clie = new Cliente(dni, nom, ape, direc, telef, corr);
             array.add(clie);
             limpiarCampos();
 
             JOptionPane.showMessageDialog(this, "Cliente añadido correctamente");
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "DNI debe ser un número entero", "Error", JOptionPane.ERROR_MESSAGE);
         } catch (Exception e) {
             // Mostrar el mensaje de error correspondiente
             JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Revise", JOptionPane.ERROR_MESSAGE);
@@ -433,21 +435,21 @@ public class winMantenimientoClientes extends javax.swing.JPanel {
     }//GEN-LAST:event_btnElimActionPerformed
 
     private void btnActuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActuaActionPerformed
-        String dni = txtDni.getText();
-        String nom = txtNom.getText();
-        String ape = txtApe.getText();
-        String direc = txtDirec.getText();
-        String telef = txtTelef.getText();
-        String corr = txtCorreo.getText();
+                try {
+            int dni = Integer.parseInt(txtDni.getText());
+            String nom = txtNom.getText();
+            String ape = txtApe.getText();
+            String direc = txtDirec.getText();
+            String telef = txtTelef.getText();
+            String corr = txtCorreo.getText();
 
-        try {
             // Verificar que todos los campos estén llenos
-            if (dni.isEmpty() || nom.isEmpty() || ape.isEmpty() || direc.isEmpty() || telef.isEmpty() || corr.isEmpty()) {
+            if (nom.isEmpty() || ape.isEmpty() || direc.isEmpty() || telef.isEmpty() || corr.isEmpty()) {
                 throw new Exception("Todos los campos deben estar llenos");
             }
 
             // Verificar que el DNI tenga 8 dígitos
-            if (dni.length() != 8) {
+            if (String.valueOf(dni).length() != 8) {
                 throw new Exception("El DNI debe tener 8 dígitos");
             }
 
@@ -466,7 +468,7 @@ public class winMantenimientoClientes extends javax.swing.JPanel {
             model.setValueAt(corr, selectedRow, 5);
 
             // Actualizar datos en la lista de clientes
-            Clientes clie = array.get(selectedRow);
+            Cliente clie = array.get(selectedRow);
             clie.setDni(dni);
             clie.setNombre(nom);
             clie.setApellidos(ape);
@@ -476,6 +478,8 @@ public class winMantenimientoClientes extends javax.swing.JPanel {
 
             JOptionPane.showMessageDialog(this, "Datos del cliente actualizados correctamente");
             limpiarCampos();
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "DNI debe ser un número entero", "Error", JOptionPane.ERROR_MESSAGE);
         } catch (Exception e) {
             // Mostrar el mensaje de error correspondiente como mensaje de error
             JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
@@ -508,12 +512,10 @@ public class winMantenimientoClientes extends javax.swing.JPanel {
     txtCorreo.setText("");
   
 }    
-    public Clientes consultar(String dni){
-        Clientes clie;
-        for(int i=0; i<array.size(); i++){
-            if(dni.equals(array.get(i).getDni()))
-            {
-                return array.get(i);
+    public Cliente consultar(int dni){
+        for (Cliente clie : array) {
+            if (clie.getDni() == dni) {
+                return clie;
             }
         }
         return null;

@@ -11,20 +11,20 @@ import java.util.Arrays;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
-import paqClases.moviestore.Peliculas;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
+import models.Pelicula;
 
 
 
 public class winMantenimientoStock extends javax.swing.JPanel {
     DefaultTableModel model;
-    ArrayList<Peliculas> array;
+    ArrayList<Pelicula> array;
     
     public winMantenimientoStock() {
         initComponents();
         InitStyles();
-        array = new ArrayList<Peliculas>();
+        array = new ArrayList<Pelicula>();
         model = new DefaultTableModel(new String[]{"Código", "Título", "Género","Fecha E ", "Sinopsis","Fecha A", "Stock", "Cantidad", "NueStock"}, 0);
         tblPeli.setModel(model);
         
@@ -454,7 +454,7 @@ public class winMantenimientoStock extends javax.swing.JPanel {
             model.setValueAt(nStock, selectedRow, 8);
 
             // Si estás usando un ArrayList para almacenar las películas, también actualízalo
-            Peliculas peli = array.get(selectedRow);
+            Pelicula peli = array.get(selectedRow);
             peli.setCodigo(cod);
             peli.setTitulo(tit);
             peli.setGenero(gen);
@@ -508,7 +508,7 @@ public class winMantenimientoStock extends javax.swing.JPanel {
     // BOTON CONSULTAS
     private void btnConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaActionPerformed
         String cod = txtCodP.getText();
-        Peliculas peli = buscar(cod);
+        Pelicula peli = buscar(cod);
         if(peli!=null)
         {
             txtCodP.setText(peli.getCodigo());
@@ -527,8 +527,8 @@ public class winMantenimientoStock extends javax.swing.JPanel {
     }//GEN-LAST:event_btnConsultaActionPerformed
     
     //BUSCAR PELICULAS 
-    public Peliculas buscar(String cod){
-        Peliculas peli;
+    public Pelicula buscar(String cod){
+        Pelicula peli;
         for ( int i=0; i<array.size(); i++)
         {
             if(cod.equals(array.get(i).getCodigo()))
@@ -563,7 +563,7 @@ public class winMantenimientoStock extends javax.swing.JPanel {
         int canti = Integer.parseInt(txtCant.getText());
         int nStock = Integer.parseInt(txtNueStock.getText());
         model.addRow(datos);
-        Peliculas peli = new Peliculas(cod, tit, gen, fechE,sinp, fechA, stock, canti, nStock);
+        Pelicula peli = new Pelicula(cod, tit, gen, fechE,sinp, fechA, stock, canti, nStock);
         array.add(peli);
         limpiarCampos();
         // Mostrar mensaje de éxito

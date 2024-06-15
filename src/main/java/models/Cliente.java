@@ -1,18 +1,14 @@
+package models;
 
-package paqClases.moviestore;
-
-public class Clientes {
-    public String dni;
-    public String nombre;
-    public String apellidos;
-    public String direccion;
-    public String telefono;
-    public String correo;
-
-    public Clientes() {
-    }
-
-    public Clientes(String dni, String nombre, String apellidos, String direccion, String telefono, String correo) {
+public class Cliente {
+    private int dni;
+    private String nombre;
+    private String apellidos;
+    private String direccion;
+    private String telefono;
+    private String correo;
+    
+    public Cliente(int dni, String nombre, String apellidos, String direccion, String telefono, String correo) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -21,11 +17,11 @@ public class Clientes {
         this.correo = correo;
     }
 
-    public String getDni() {
+    public int getDni() {
         return dni;
     }
 
-    public void setDni(String dni) {
+    public void setDni(int dni) {
         this.dni = dni;
     }
 
