@@ -1,5 +1,6 @@
-package com.mycompany.views;
+package views;
 
+import views.winMantenimientoPelicula;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 import views.winMantenimientoClientes;
@@ -59,7 +60,10 @@ public class winMantenimiento extends javax.swing.JPanel {
 
         setLayout(new java.awt.BorderLayout());
 
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
         content.setBackground(new java.awt.Color(224, 224, 224));
+        content.setLayout(new java.awt.BorderLayout());
 
         jPanelHeader.setBackground(new java.awt.Color(255, 255, 255));
         jPanelHeader.setLayout(new java.awt.BorderLayout());
@@ -67,6 +71,12 @@ public class winMantenimiento extends javax.swing.JPanel {
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(21, 100, 192));
         jPanelHeader.add(jSeparator1, java.awt.BorderLayout.PAGE_END);
+
+        content.add(jPanelHeader, java.awt.BorderLayout.CENTER);
+
+        jPanel1.add(content, java.awt.BorderLayout.CENTER);
+
+        add(jPanel1, java.awt.BorderLayout.PAGE_END);
 
         jPanelTittle.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -81,7 +91,7 @@ public class winMantenimiento extends javax.swing.JPanel {
             .addGroup(jPanelTittleLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(598, Short.MAX_VALUE))
+                .addContainerGap(661, Short.MAX_VALUE))
         );
         jPanelTittleLayout.setVerticalGroup(
             jPanelTittleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,7 +101,7 @@ public class winMantenimiento extends javax.swing.JPanel {
                 .addGap(17, 17, 17))
         );
 
-        jPanelHeader.add(jPanelTittle, java.awt.BorderLayout.LINE_START);
+        add(jPanelTittle, java.awt.BorderLayout.PAGE_START);
 
         jPanelContenedorOpcions.setBackground(new java.awt.Color(0, 0, 0));
         jPanelContenedorOpcions.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -223,39 +233,13 @@ public class winMantenimiento extends javax.swing.JPanel {
         });
         jPanelContenedorOpcion3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 280, 340));
 
-        jPanelContenedorOpcions.add(jPanelContenedorOpcion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 100, 270, 350));
+        jPanelContenedorOpcions.add(jPanelContenedorOpcion3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 100, 270, 350));
 
-        javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
-        content.setLayout(contentLayout);
-        contentLayout.setHorizontalGroup(
-            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 960, Short.MAX_VALUE)
-            .addComponent(jPanelContenedorOpcions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        contentLayout.setVerticalGroup(
-            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contentLayout.createSequentialGroup()
-                .addComponent(jPanelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelContenedorOpcions, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        add(jPanel1, java.awt.BorderLayout.CENTER);
+        add(jPanelContenedorOpcions, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       ShowJPanel(new winMantenimientoStock());
+       ShowJPanel(new winMantenimientoPelicula());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed

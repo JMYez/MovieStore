@@ -1,5 +1,5 @@
 
-package com.mycompany.views;
+package views;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -17,11 +17,11 @@ import models.Pelicula;
 
 
 
-public class winMantenimientoStock extends javax.swing.JPanel {
+public class winMantenimientoPelicula extends javax.swing.JPanel {
     DefaultTableModel model;
     ArrayList<Pelicula> array;
     
-    public winMantenimientoStock() {
+    public winMantenimientoPelicula() {
         initComponents();
         InitStyles();
         array = new ArrayList<Pelicula>();
@@ -204,8 +204,6 @@ public class winMantenimientoStock extends javax.swing.JPanel {
         });
         tblPeli.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         tblPeli.setSelectionBackground(new java.awt.Color(0, 0, 50));
-        tblPeli.setShowHorizontalLines(true);
-        tblPeli.setShowVerticalLines(true);
         jScrollPane2.setViewportView(tblPeli);
 
         catalogoSearch.setBackground(new java.awt.Color(51, 51, 51));
@@ -390,7 +388,7 @@ public class winMantenimientoStock extends javax.swing.JPanel {
         labelInput1.setBackground(new java.awt.Color(255, 255, 255));
         labelInput1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         labelInput1.setForeground(new java.awt.Color(229, 9, 20));
-        labelInput1.setText("MANTENIMIENTO DE STOCK");
+        labelInput1.setText("MANTENIMIENTO DE PELICULAS");
 
         jSeparator4.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator4.setForeground(new java.awt.Color(21, 100, 192));
