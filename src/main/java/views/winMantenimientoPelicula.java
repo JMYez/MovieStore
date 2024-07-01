@@ -86,93 +86,77 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        btnActualizar = new javax.swing.JButton();
-        btnEliminar = new javax.swing.JButton();
-        btnListar = new javax.swing.JButton();
-        txtFechA = new javax.swing.JTextField();
-        txtStock = new javax.swing.JTextField();
-        txtCant = new javax.swing.JTextField();
-        txtNueStock = new javax.swing.JTextField();
-        btnBuscar = new javax.swing.JButton();
-        btnConsulta = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        tblPeli = new javax.swing.JTable();
-        catalogoSearch = new javax.swing.JTextField();
-        txtSinp = new javax.swing.JTextField();
-        txtGen = new javax.swing.JTextField();
-        txtPeli = new javax.swing.JTextField();
-        txtCodP = new javax.swing.JTextField();
-        jSeparator3 = new javax.swing.JSeparator();
-        jLabel20 = new javax.swing.JLabel();
-        txtFechE = new javax.swing.JTextField();
-        btnGuardar = new javax.swing.JButton();
-        btnSalir = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         labelInput1 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
+        jPanel1 = new javax.swing.JPanel();
+        txtCodP = new javax.swing.JTextField();
+        btnConsulta = new javax.swing.JButton();
+        txtPeli = new javax.swing.JTextField();
+        txtGen = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        txtFechE = new javax.swing.JTextField();
+        txtSinp = new javax.swing.JTextField();
+        catalogoSearch = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tblPeli = new javax.swing.JTable();
+        btnActualizar = new javax.swing.JButton();
+        btnListar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
+        txtNueStock = new javax.swing.JTextField();
+        txtCant = new javax.swing.JTextField();
+        txtStock = new javax.swing.JTextField();
+        txtFechA = new javax.swing.JTextField();
+        btnGuardar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setMinimumSize(new java.awt.Dimension(750, 430));
-        setPreferredSize(new java.awt.Dimension(750, 430));
+        setMaximumSize(new java.awt.Dimension(780, 600));
+        setMinimumSize(new java.awt.Dimension(780, 600));
+        setPreferredSize(new java.awt.Dimension(780, 430));
         setLayout(new java.awt.BorderLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
-        jPanel1.setMinimumSize(new java.awt.Dimension(750, 430));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1908, 430));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        btnActualizar.setBackground(new java.awt.Color(0, 51, 51));
-        btnActualizar.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        btnActualizar.setForeground(new java.awt.Color(255, 255, 255));
-        btnActualizar.setText("Actualizar");
-        btnActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnActualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActualizarActionPerformed(evt);
-            }
-        });
+        labelInput1.setBackground(new java.awt.Color(255, 255, 255));
+        labelInput1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        labelInput1.setForeground(new java.awt.Color(229, 9, 20));
+        labelInput1.setText("MANTENIMIENTO DE PELICULAS");
 
-        btnEliminar.setBackground(new java.awt.Color(102, 0, 0));
-        btnEliminar.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
-        btnEliminar.setText("Eliminar");
-        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarActionPerformed(evt);
-            }
-        });
+        jSeparator4.setBackground(new java.awt.Color(255, 255, 255));
+        jSeparator4.setForeground(new java.awt.Color(21, 100, 192));
 
-        btnListar.setBackground(new java.awt.Color(0, 51, 0));
-        btnListar.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        btnListar.setForeground(new java.awt.Color(255, 255, 255));
-        btnListar.setText("Listar");
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(labelInput1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(305, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(labelInput1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
-        txtFechA.setBackground(new java.awt.Color(51, 51, 51));
-        txtFechA.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtFechA.setForeground(new java.awt.Color(204, 204, 204));
-        txtFechA.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        add(jPanel3, java.awt.BorderLayout.PAGE_START);
 
-        txtStock.setBackground(new java.awt.Color(51, 51, 51));
-        txtStock.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtStock.setForeground(new java.awt.Color(204, 204, 204));
-        txtStock.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        jPanel1.setBackground(new java.awt.Color(20, 20, 20));
 
-        txtCant.setBackground(new java.awt.Color(51, 51, 51));
-        txtCant.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtCant.setForeground(new java.awt.Color(204, 204, 204));
-        txtCant.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        txtNueStock.setBackground(new java.awt.Color(51, 51, 51));
-        txtNueStock.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtNueStock.setForeground(new java.awt.Color(204, 204, 204));
-        txtNueStock.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        btnBuscar.setBackground(new java.awt.Color(0, 0, 50));
-        btnBuscar.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscar.setText("Buscar");
-        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        txtCodP.setBackground(new java.awt.Color(51, 51, 51));
+        txtCodP.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtCodP.setForeground(new java.awt.Color(204, 204, 204));
+        txtCodP.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        txtCodP.setCaretColor(new java.awt.Color(237, 237, 237));
+        txtCodP.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
 
         btnConsulta.setBackground(new java.awt.Color(242, 25, 25));
         btnConsulta.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
@@ -184,6 +168,35 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
                 btnConsultaActionPerformed(evt);
             }
         });
+
+        txtPeli.setBackground(new java.awt.Color(51, 51, 51));
+        txtPeli.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtPeli.setForeground(new java.awt.Color(204, 204, 204));
+        txtPeli.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        txtGen.setBackground(new java.awt.Color(51, 51, 51));
+        txtGen.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtGen.setForeground(new java.awt.Color(204, 204, 204));
+        txtGen.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        jLabel20.setBackground(new java.awt.Color(204, 204, 204));
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("Ingresar los datos de las películas para añadir");
+
+        txtFechE.setBackground(new java.awt.Color(51, 51, 51));
+        txtFechE.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtFechE.setForeground(new java.awt.Color(204, 204, 204));
+        txtFechE.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        txtSinp.setBackground(new java.awt.Color(51, 51, 51));
+        txtSinp.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtSinp.setForeground(new java.awt.Color(204, 204, 204));
+        txtSinp.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        catalogoSearch.setBackground(new java.awt.Color(51, 51, 51));
+        catalogoSearch.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        catalogoSearch.setForeground(new java.awt.Color(204, 204, 204));
 
         tblPeli.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         tblPeli.setModel(new javax.swing.table.DefaultTableModel(
@@ -206,51 +219,30 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
         tblPeli.setSelectionBackground(new java.awt.Color(0, 0, 50));
         jScrollPane2.setViewportView(tblPeli);
 
-        catalogoSearch.setBackground(new java.awt.Color(51, 51, 51));
-        catalogoSearch.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        catalogoSearch.setForeground(new java.awt.Color(204, 204, 204));
-
-        txtSinp.setBackground(new java.awt.Color(51, 51, 51));
-        txtSinp.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtSinp.setForeground(new java.awt.Color(204, 204, 204));
-        txtSinp.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        txtGen.setBackground(new java.awt.Color(51, 51, 51));
-        txtGen.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtGen.setForeground(new java.awt.Color(204, 204, 204));
-        txtGen.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        txtPeli.setBackground(new java.awt.Color(51, 51, 51));
-        txtPeli.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtPeli.setForeground(new java.awt.Color(204, 204, 204));
-        txtPeli.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        txtCodP.setBackground(new java.awt.Color(51, 51, 51));
-        txtCodP.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtCodP.setForeground(new java.awt.Color(204, 204, 204));
-        txtCodP.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        txtCodP.setCaretColor(new java.awt.Color(237, 237, 237));
-        txtCodP.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-
-        jSeparator3.setBackground(new java.awt.Color(255, 255, 255));
-        jSeparator3.setForeground(new java.awt.Color(21, 100, 192));
-
-        jLabel20.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel20.setText("Ingresar los datos de las películas para añadir");
-
-        txtFechE.setBackground(new java.awt.Color(51, 51, 51));
-        txtFechE.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtFechE.setForeground(new java.awt.Color(204, 204, 204));
-        txtFechE.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        btnGuardar.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
-        btnGuardar.setForeground(new java.awt.Color(229, 9, 20));
-        btnGuardar.setText("Añadir");
-        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+        btnActualizar.setBackground(new java.awt.Color(0, 51, 51));
+        btnActualizar.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        btnActualizar.setForeground(new java.awt.Color(255, 255, 255));
+        btnActualizar.setText("Actualizar");
+        btnActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarActionPerformed(evt);
+                btnActualizarActionPerformed(evt);
+            }
+        });
+
+        btnListar.setBackground(new java.awt.Color(0, 51, 0));
+        btnListar.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        btnListar.setForeground(new java.awt.Color(255, 255, 255));
+        btnListar.setText("Listar");
+
+        btnEliminar.setBackground(new java.awt.Color(102, 0, 0));
+        btnEliminar.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminar.setText("Eliminar");
+        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
             }
         });
 
@@ -265,19 +257,52 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
             }
         });
 
+        txtNueStock.setBackground(new java.awt.Color(51, 51, 51));
+        txtNueStock.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtNueStock.setForeground(new java.awt.Color(204, 204, 204));
+        txtNueStock.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        txtCant.setBackground(new java.awt.Color(51, 51, 51));
+        txtCant.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtCant.setForeground(new java.awt.Color(204, 204, 204));
+        txtCant.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        txtStock.setBackground(new java.awt.Color(51, 51, 51));
+        txtStock.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtStock.setForeground(new java.awt.Color(204, 204, 204));
+        txtStock.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        txtFechA.setBackground(new java.awt.Color(51, 51, 51));
+        txtFechA.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtFechA.setForeground(new java.awt.Color(204, 204, 204));
+        txtFechA.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        btnGuardar.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        btnGuardar.setForeground(new java.awt.Color(229, 9, 20));
+        btnGuardar.setText("Añadir");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel20))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtGen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtFechE, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(225, 225, 225)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtCant, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtNueStock, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -289,221 +314,71 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
                                         .addComponent(btnConsulta)
                                         .addGap(86, 86, 86)))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtFechA, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(txtGen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtFechE, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtSinp, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(225, 225, 225)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtNueStock, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtCant, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addGap(293, 293, 293)
-                                        .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addGap(12, 302, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(catalogoSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 648, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtFechA, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(37, 37, 37)
+                                        .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(catalogoSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 648, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtSinp, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel20)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane2)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 826, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnListar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(btnListar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
+                .addContainerGap()
                 .addComponent(jLabel20)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtCodP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtFechA, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPeli, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtGen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCant, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtFechE, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNueStock, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtSinp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(catalogoSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtCodP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtFechA, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPeli, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtCant, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtGen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtFechE, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNueStock, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtSinp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(catalogoSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(328, 328, 328)
                         .addComponent(btnActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnListar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addGap(18, 18, 18)
-                .addComponent(btnSalir)
-                .addGap(9, 9, 9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSalir))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
         add(jPanel1, java.awt.BorderLayout.CENTER);
-
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-
-        labelInput1.setBackground(new java.awt.Color(255, 255, 255));
-        labelInput1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        labelInput1.setForeground(new java.awt.Color(229, 9, 20));
-        labelInput1.setText("MANTENIMIENTO DE PELICULAS");
-
-        jSeparator4.setBackground(new java.awt.Color(255, 255, 255));
-        jSeparator4.setForeground(new java.awt.Color(21, 100, 192));
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(labelInput1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(270, 270, 270))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(labelInput1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        add(jPanel3, java.awt.BorderLayout.PAGE_START);
     }// </editor-fold>//GEN-END:initComponents
-    // BOTON DE ACTUALIZAR
-    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        int selectedRow = tblPeli.getSelectedRow();
-    if (selectedRow != -1) {
-        try {
-            // Obtener los nuevos valores de los JTextField
-            String cod = txtCodP.getText();
-            String tit = txtPeli.getText();
-            String gen = txtGen.getText();
-            String fchE = txtFechE.getText();
-            String sinp = txtSinp.getText();
-            String fchA = txtFechA.getText();
-            String stk = txtStock.getText();
-            String cant = txtCant.getText();
-            String nStk = txtNueStock.getText();
 
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
-            LocalDate fechE = LocalDate.parse(fchE, formatter);
-            LocalDate fechA = LocalDate.parse(fchA, formatter);
-            int stock = Integer.parseInt(stk);
-            int canti = Integer.parseInt(cant);
-            int nStock = Integer.parseInt(nStk);
-
-            // Actualizar la fila seleccionada en el modelo de la tabla
-            model.setValueAt(cod, selectedRow, 0);
-            model.setValueAt(tit, selectedRow, 1);
-            model.setValueAt(gen, selectedRow, 2);
-            model.setValueAt(fechE, selectedRow, 3);
-            model.setValueAt(sinp, selectedRow, 4);
-            model.setValueAt(fechA, selectedRow, 5);        
-            model.setValueAt(stock, selectedRow, 6);
-            model.setValueAt(canti, selectedRow, 7);
-            model.setValueAt(nStock, selectedRow, 8);
-
-            // Si estás usando un ArrayList para almacenar las películas, también actualízalo
-            Pelicula peli = array.get(selectedRow);
-            peli.setCodigo(cod);
-            peli.setTitulo(tit);
-            peli.setGenero(gen);
-            peli.setFechaEstreno(fechE);
-            peli.setSinopsis(sinp);
-            peli.setFechaAgregacion(fechA);  
-            peli.setStock(stock);
-            peli.setCantidad(canti);
-            peli.setNueStock(nStock);
-
-            // Mostrar mensaje de éxito
-            JOptionPane.showMessageDialog(this, "La película se ha actualizado correctamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-        } catch (DateTimeParseException | NumberFormatException e) {
-            // Mostrar mensaje de error si ocurre una excepción al convertir fechas o números
-            JOptionPane.showMessageDialog(this, "Error al actualizar la película. Verifica los campos ingresados.", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    } else {
-        // Mostrar mensaje de error si no hay una fila seleccionada
-        JOptionPane.showMessageDialog(this, "Por favor, selecciona una película de la tabla para actualizar.", "Error", JOptionPane.ERROR_MESSAGE);
-    }
-    }//GEN-LAST:event_btnActualizarActionPerformed
-    
-    // BOTON DE ELIMINAR
-    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        int elim = tblPeli.getSelectedRow();
-        if(elim>=0)
-        {
-            array.remove(elim);
-            model.removeRow(elim);
-            limpiarCampos();
-        }
-        else{
-           JOptionPane.showMessageDialog(null,"Falta selecionar fila");
-        }
-    }//GEN-LAST:event_btnEliminarActionPerformed
-    
-    // METODO PARA LIMPIAR TEXTFIELD
-    private void limpiarCampos() {
-    txtCodP.setText("");
-    txtPeli.setText("");
-    txtGen.setText("");
-    txtFechE.setText("");
-    txtSinp.setText("");
-    txtFechA.setText("");
-    txtStock.setText("");
-    txtCant.setText("");
-    txtNueStock.setText("");
-    txtCodP.requestFocus();
-}
-    
-    // BOTON CONSULTAS
     private void btnConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaActionPerformed
         String cod = txtCodP.getText();
         Pelicula peli = buscar(cod);
@@ -520,58 +395,79 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
             txtNueStock.setText(peli.getNueStock() + "");
             txtCodP.requestFocus();
         }else
-            JOptionPane.showMessageDialog(null,"Pelicula " + cod + ", No existe");
-        
+        JOptionPane.showMessageDialog(null,"Pelicula " + cod + ", No existe");
     }//GEN-LAST:event_btnConsultaActionPerformed
-    
-    //BUSCAR PELICULAS 
-    public Pelicula buscar(String cod){
-        Pelicula peli;
-        for ( int i=0; i<array.size(); i++)
-        {
-            if(cod.equals(array.get(i).getCodigo()))
-            {
-                return array.get(i);
-            }
-        }
-        return null;
-    }
-    
-     // BOTON GUARDAR/AÑADIR
-    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-         String cod, tit, gen, sinp;
-        String datos[] = new String[9];
-        
-        datos[0] = cod = txtCodP.getText();
-        datos[1] = tit = txtPeli.getText();
-        datos[2] = gen = txtGen.getText();
-        datos[3] = txtFechE.getText();    
-        datos[4] = sinp = txtSinp.getText();
-        datos[5] = txtFechA.getText();
-        datos[6]  = txtStock.getText();
-        datos[7]  = txtCant.getText();
-        datos[8] = txtNueStock.getText();
-        
-        
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-    try {
-        LocalDate fechE = LocalDate.parse(txtFechE.getText(), formatter);
-        LocalDate fechA = LocalDate.parse(txtFechA.getText(), formatter);
-        int stock = Integer.parseInt(txtStock.getText());
-        int canti = Integer.parseInt(txtCant.getText());
-        int nStock = Integer.parseInt(txtNueStock.getText());
-        model.addRow(datos);
-        Pelicula peli = new Pelicula(cod, tit, gen, fechE,sinp, fechA, stock, canti, nStock);
-        array.add(peli);
-        limpiarCampos();
-        // Mostrar mensaje de éxito
-        JOptionPane.showMessageDialog(this, "La película se ha añadido correctamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-    } catch (DateTimeParseException | NumberFormatException e) {
-        // Mostrar mensaje de error si ocurre una excepción al convertir fechas o números
-        JOptionPane.showMessageDialog(this, "Error al añadir la película. Verifica los campos ingresados.", "Error", JOptionPane.ERROR_MESSAGE);
-    }
 
-    }//GEN-LAST:event_btnGuardarActionPerformed
+    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
+        int selectedRow = tblPeli.getSelectedRow();
+        if (selectedRow != -1) {
+            try {
+                // Obtener los nuevos valores de los JTextField
+                String cod = txtCodP.getText();
+                String tit = txtPeli.getText();
+                String gen = txtGen.getText();
+                String fchE = txtFechE.getText();
+                String sinp = txtSinp.getText();
+                String fchA = txtFechA.getText();
+                String stk = txtStock.getText();
+                String cant = txtCant.getText();
+                String nStk = txtNueStock.getText();
+
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+                LocalDate fechE = LocalDate.parse(fchE, formatter);
+                LocalDate fechA = LocalDate.parse(fchA, formatter);
+                int stock = Integer.parseInt(stk);
+                int canti = Integer.parseInt(cant);
+                int nStock = Integer.parseInt(nStk);
+
+                // Actualizar la fila seleccionada en el modelo de la tabla
+                model.setValueAt(cod, selectedRow, 0);
+                model.setValueAt(tit, selectedRow, 1);
+                model.setValueAt(gen, selectedRow, 2);
+                model.setValueAt(fechE, selectedRow, 3);
+                model.setValueAt(sinp, selectedRow, 4);
+                model.setValueAt(fechA, selectedRow, 5);
+                model.setValueAt(stock, selectedRow, 6);
+                model.setValueAt(canti, selectedRow, 7);
+                model.setValueAt(nStock, selectedRow, 8);
+
+                // Si estás usando un ArrayList para almacenar las películas, también actualízalo
+                Pelicula peli = array.get(selectedRow);
+                peli.setCodigo(cod);
+                peli.setTitulo(tit);
+                peli.setGenero(gen);
+                peli.setFechaEstreno(fechE);
+                peli.setSinopsis(sinp);
+                peli.setFechaAgregacion(fechA);
+                peli.setStock(stock);
+                peli.setCantidad(canti);
+                peli.setNueStock(nStock);
+
+                // Mostrar mensaje de éxito
+                JOptionPane.showMessageDialog(this, "La película se ha actualizado correctamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+            } catch (DateTimeParseException | NumberFormatException e) {
+                // Mostrar mensaje de error si ocurre una excepción al convertir fechas o números
+                JOptionPane.showMessageDialog(this, "Error al actualizar la película. Verifica los campos ingresados.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } else {
+            // Mostrar mensaje de error si no hay una fila seleccionada
+            JOptionPane.showMessageDialog(this, "Por favor, selecciona una película de la tabla para actualizar.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnActualizarActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        int elim = tblPeli.getSelectedRow();
+        if(elim>=0)
+        {
+            array.remove(elim);
+            model.removeRow(elim);
+            limpiarCampos();
+        }
+        else{
+            JOptionPane.showMessageDialog(null,"Falta selecionar fila");
+        }
+    }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
         Container sal = this.getParent();
@@ -584,11 +480,73 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
             }
         }
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        String cod, tit, gen, sinp;
+        String datos[] = new String[9];
+
+        datos[0] = cod = txtCodP.getText();
+        datos[1] = tit = txtPeli.getText();
+        datos[2] = gen = txtGen.getText();
+        datos[3] = txtFechE.getText();
+        datos[4] = sinp = txtSinp.getText();
+        datos[5] = txtFechA.getText();
+        datos[6]  = txtStock.getText();
+        datos[7]  = txtCant.getText();
+        datos[8] = txtNueStock.getText();
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        try {
+            LocalDate fechE = LocalDate.parse(txtFechE.getText(), formatter);
+            LocalDate fechA = LocalDate.parse(txtFechA.getText(), formatter);
+            int stock = Integer.parseInt(txtStock.getText());
+            int canti = Integer.parseInt(txtCant.getText());
+            int nStock = Integer.parseInt(txtNueStock.getText());
+            model.addRow(datos);
+            Pelicula peli = new Pelicula(cod, tit, gen, fechE,sinp, fechA, stock, canti, nStock);
+            array.add(peli);
+            limpiarCampos();
+            // Mostrar mensaje de éxito
+            JOptionPane.showMessageDialog(this, "La película se ha añadido correctamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+        } catch (DateTimeParseException | NumberFormatException e) {
+            // Mostrar mensaje de error si ocurre una excepción al convertir fechas o números
+            JOptionPane.showMessageDialog(this, "Error al añadir la película. Verifica los campos ingresados.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnGuardarActionPerformed
+
+   
+   
+    // METODO PARA LIMPIAR TEXTFIELD
+    private void limpiarCampos() {
+    txtCodP.setText("");
+    txtPeli.setText("");
+    txtGen.setText("");
+    txtFechE.setText("");
+    txtSinp.setText("");
+    txtFechA.setText("");
+    txtStock.setText("");
+    txtCant.setText("");
+    txtNueStock.setText("");
+    txtCodP.requestFocus();
+}
     
+   
+    //BUSCAR PELICULAS 
+    public Pelicula buscar(String cod){
+        Pelicula peli;
+        for ( int i=0; i<array.size(); i++)
+        {
+            if(cod.equals(array.get(i).getCodigo()))
+            {
+                return array.get(i);
+            }
+        }
+        return null;
+    }
+        
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnActualizar;
-    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnConsulta;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnGuardar;
@@ -599,7 +557,6 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JLabel labelInput1;
     private javax.swing.JTable tblPeli;
