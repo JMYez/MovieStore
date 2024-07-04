@@ -121,7 +121,7 @@
                           <Component id="btnwinProcesos" min="-2" pref="270" max="-2" attributes="0"/>
                           <Component id="btnwinMantenimiento" min="-2" pref="270" max="-2" attributes="0"/>
                           <Component id="btnCerrarSesion" min="-2" pref="270" max="-2" attributes="0"/>
-                          <Component id="btnwinMantenimiento1" min="-2" pref="270" max="-2" attributes="0"/>
+                          <Component id="btnwinReportes" min="-2" pref="270" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
@@ -145,7 +145,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnwinMantenimiento" min="-2" pref="44" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btnwinMantenimiento1" min="-2" pref="44" max="-2" attributes="0"/>
+                      <Component id="btnwinReportes" min="-2" pref="44" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnCerrarSesion" min="-2" pref="44" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
@@ -362,7 +362,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCerrarSesionActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="btnwinMantenimiento1">
+            <Component class="javax.swing.JButton" name="btnwinReportes">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
@@ -390,7 +390,7 @@
                 <Property name="iconTextGap" type="int" value="10"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnwinMantenimiento1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnwinReportesActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
