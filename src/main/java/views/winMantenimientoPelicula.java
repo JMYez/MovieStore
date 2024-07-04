@@ -1,31 +1,34 @@
 
 package views;
 
+import controllers.PeliculaController;
 import java.awt.Color;
 import java.awt.Container;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import models.Pelicula;
-
-
+import controllers.AccessFilePelicula;
+import java.util.Vector;
 
 public class winMantenimientoPelicula extends javax.swing.JPanel {
     DefaultTableModel model;
-    ArrayList<Pelicula> array;
+    PeliculaController peliCont;
+    AccessFilePelicula file;
     
     public winMantenimientoPelicula() {
         initComponents();
         InitStyles();
-        array = new ArrayList<Pelicula>();
-        model = new DefaultTableModel(new String[]{"Código", "Título", "Género","Fecha E ", "Sinopsis","Fecha A", "Stock", "Cantidad", "NueStock"}, 0);
+        file = new AccessFilePelicula();
+        peliCont = new PeliculaController();
+        model = new DefaultTableModel(new String[]{"Código", "Título", "Género","Sinopsis ", "Fecha E","Fecha A", "Stock"}, 0);
         tblPeli.setModel(model);
         
         tblPeli.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
@@ -38,18 +41,14 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
                 txtCodP.setText(model.getValueAt(selectedRow, 0).toString());
                 txtPeli.setText(model.getValueAt(selectedRow, 1).toString());
                 txtGen.setText(model.getValueAt(selectedRow, 2).toString());
-                txtFechE.setText(model.getValueAt(selectedRow, 3).toString());
-                txtSinp.setText(model.getValueAt(selectedRow, 4).toString());
+                txtSinp.setText(model.getValueAt(selectedRow, 3).toString());
+                txtFechE.setText(model.getValueAt(selectedRow, 4).toString());
                 txtFechA.setText(model.getValueAt(selectedRow, 5).toString());
                 txtStock.setText(model.getValueAt(selectedRow, 6).toString());
-                txtCant.setText(model.getValueAt(selectedRow, 7).toString());
-                txtNueStock.setText(model.getValueAt(selectedRow, 8).toString());
                 }
             }
         }
-      });
-        
-        
+      });       
     }
     
     private void InitStyles() {
@@ -58,30 +57,19 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
         txtCodP.putClientProperty("JTextField.placeholderText", "Codigo de pelicula");
         txtPeli.putClientProperty("JTextField.placeholderText", "Titulo");
         txtGen.putClientProperty("JTextField.placeholderText", "Genero");
-        txtFechE.putClientProperty("JTextField.placeholderText", "Fecha Estreno");
         txtSinp.putClientProperty("JTextField.placeholderText", "Sinópsis");
+        txtFechE.putClientProperty("JTextField.placeholderText", "Fecha Estreno");
         txtFechA.putClientProperty("JTextField.placeholderText", "Fecha Agregada");
         txtStock.putClientProperty("JTextField.placeholderText", "Stock");
-        txtCant.putClientProperty("JTextField.placeholderText", "Cantidad");
-        txtNueStock.putClientProperty("JTextField.placeholderText", "Nuevo Stock");
        
         // Cambiar los estilos y colores de otros componentes aquí
     
         // Renderizador personalizado para los encabezados de columna
         DefaultTableCellRenderer headerRenderer = new DefaultTableCellRenderer();
-    
-        //setOpaque(true); // Asegurar que el componente es opaco para que el color de fondo sea visible
-        //headerRenderer.setForeground(Color.WHITE); // Color del texto en blanco
         headerRenderer.setBackground(new Color(0xE50914)); // Color de fondo #1564c0
-        //headerRenderer.setHorizontalAlignment(JLabel.CENTER); // Alinear texto horizontalmente al centro
-        //headerRenderer.setVerticalAlignment(JLabel.CENTER); // Alinear texto verticalmente al centro
-        //headerRenderer.setFont(getFont().deriveFont(Font.BOLD, 16f)); // Fuente en negrita
-    
-        // Aplicar el renderizador personalizado al encabezado de la tabla
         tblPeli.getTableHeader().setDefaultRenderer(headerRenderer);
     }
     
-/////////////////////A PARTIR DE AQUI HACIA ABAJO ES FULL CODIGO DE BOTONES, OTROS METODOS/OPERACIONES//////////////////////////////////////////////////////
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -104,11 +92,10 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
         btnListar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
-        txtNueStock = new javax.swing.JTextField();
-        txtCant = new javax.swing.JTextField();
         txtStock = new javax.swing.JTextField();
         txtFechA = new javax.swing.JTextField();
         btnGuardar = new javax.swing.JButton();
+        btnMostrar = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(780, 600));
@@ -136,7 +123,7 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(labelInput1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(305, Short.MAX_VALUE))
+                .addContainerGap(306, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,7 +131,8 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
                 .addGap(10, 10, 10)
                 .addComponent(labelInput1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 24, Short.MAX_VALUE))
         );
 
         add(jPanel3, java.awt.BorderLayout.PAGE_START);
@@ -257,16 +245,6 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
             }
         });
 
-        txtNueStock.setBackground(new java.awt.Color(51, 51, 51));
-        txtNueStock.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtNueStock.setForeground(new java.awt.Color(204, 204, 204));
-        txtNueStock.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
-        txtCant.setBackground(new java.awt.Color(51, 51, 51));
-        txtCant.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtCant.setForeground(new java.awt.Color(204, 204, 204));
-        txtCant.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-
         txtStock.setBackground(new java.awt.Color(51, 51, 51));
         txtStock.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txtStock.setForeground(new java.awt.Color(204, 204, 204));
@@ -286,54 +264,61 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
             }
         });
 
+        btnMostrar.setText("Mostrar");
+        btnMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 826, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnListar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 24, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(txtGen, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtFechE, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(225, 225, 225)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtCant, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtNueStock, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(txtPeli, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(225, 225, 225))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(txtCodP, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(36, 36, 36)
-                                        .addComponent(btnConsulta)
-                                        .addGap(86, 86, 86)))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(txtFechA, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(37, 37, 37)
-                                        .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(catalogoSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 648, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtSinp, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel20)))
+                        .addGap(6, 6, 6)
+                        .addComponent(txtSinp, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 826, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnActualizar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnListar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(txtCodP, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(36, 36, 36)
+                                    .addComponent(btnConsulta)
+                                    .addGap(80, 80, 80))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(txtPeli, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(219, 219, 219)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(txtGen, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(219, 219, 219)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtFechA, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
+                            .addComponent(txtFechE)
+                            .addComponent(txtStock))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(catalogoSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 648, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel20))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -344,24 +329,22 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCodP, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtFechA, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtFechE, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPeli, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPeli, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtFechA, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtGen, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCant, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtFechE, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNueStock, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtSinp, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(catalogoSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(catalogoSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -373,100 +356,29 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnSalir))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         add(jPanel1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaActionPerformed
-        String cod = txtCodP.getText();
-        Pelicula peli = buscar(cod);
-        if(peli!=null)
-        {
-            txtCodP.setText(peli.getCodigo());
-            txtPeli.setText(peli.getTitulo());
-            txtGen.setText(peli.getGenero());
-            txtFechE.setText(peli.getFechaEstreno() + "");
-            txtSinp.setText(peli.getSinopsis());
-            txtFechA.setText(peli.getFechaAgregacion()+ "");
-            txtStock.setText(peli.getStock() + "");
-            txtCant.setText(peli.getCantidad() + "");
-            txtNueStock.setText(peli.getNueStock() + "");
-            txtCodP.requestFocus();
-        }else
-        JOptionPane.showMessageDialog(null,"Pelicula " + cod + ", No existe");
+       peliCont.consultarPelicula(txtCodP, txtPeli, txtGen, txtSinp, txtFechE, txtFechA, txtStock);
     }//GEN-LAST:event_btnConsultaActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        int selectedRow = tblPeli.getSelectedRow();
-        if (selectedRow != -1) {
-            try {
-                // Obtener los nuevos valores de los JTextField
-                String cod = txtCodP.getText();
-                String tit = txtPeli.getText();
-                String gen = txtGen.getText();
-                String fchE = txtFechE.getText();
-                String sinp = txtSinp.getText();
-                String fchA = txtFechA.getText();
-                String stk = txtStock.getText();
-                String cant = txtCant.getText();
-                String nStk = txtNueStock.getText();
-
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
-                LocalDate fechE = LocalDate.parse(fchE, formatter);
-                LocalDate fechA = LocalDate.parse(fchA, formatter);
-                int stock = Integer.parseInt(stk);
-                int canti = Integer.parseInt(cant);
-                int nStock = Integer.parseInt(nStk);
-
-                // Actualizar la fila seleccionada en el modelo de la tabla
-                model.setValueAt(cod, selectedRow, 0);
-                model.setValueAt(tit, selectedRow, 1);
-                model.setValueAt(gen, selectedRow, 2);
-                model.setValueAt(fechE, selectedRow, 3);
-                model.setValueAt(sinp, selectedRow, 4);
-                model.setValueAt(fechA, selectedRow, 5);
-                model.setValueAt(stock, selectedRow, 6);
-                model.setValueAt(canti, selectedRow, 7);
-                model.setValueAt(nStock, selectedRow, 8);
-
-                // Si estás usando un ArrayList para almacenar las películas, también actualízalo
-                Pelicula peli = array.get(selectedRow);
-                peli.setCodigo(cod);
-                peli.setTitulo(tit);
-                peli.setGenero(gen);
-                peli.setFechaEstreno(fechE);
-                peli.setSinopsis(sinp);
-                peli.setFechaAgregacion(fechA);
-                peli.setStock(stock);
-                peli.setCantidad(canti);
-                peli.setNueStock(nStock);
-
-                // Mostrar mensaje de éxito
-                JOptionPane.showMessageDialog(this, "La película se ha actualizado correctamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-            } catch (DateTimeParseException | NumberFormatException e) {
-                // Mostrar mensaje de error si ocurre una excepción al convertir fechas o números
-                JOptionPane.showMessageDialog(this, "Error al actualizar la película. Verifica los campos ingresados.", "Error", JOptionPane.ERROR_MESSAGE);
-            }
-        } else {
-            // Mostrar mensaje de error si no hay una fila seleccionada
-            JOptionPane.showMessageDialog(this, "Por favor, selecciona una película de la tabla para actualizar.", "Error", JOptionPane.ERROR_MESSAGE);
+        try{
+            peliCont.actualizarPelicula(tblPeli, txtCodP, txtPeli, txtGen, txtSinp, txtFechE, txtFechA,txtStock );
+        }catch(Exception e){
+            Logger.getLogger(winMantenimientoPelicula.class.getName()).log(Level.SEVERE, null, e);
         }
+        limpiarCampos();
     }//GEN-LAST:event_btnActualizarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        int elim = tblPeli.getSelectedRow();
-        if(elim>=0)
-        {
-            array.remove(elim);
-            model.removeRow(elim);
-            limpiarCampos();
-        }
-        else{
-            JOptionPane.showMessageDialog(null,"Falta selecionar fila");
-        }
+        peliCont.eliminarPelicula(tblPeli);
+        
+        limpiarCampos();
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
@@ -482,40 +394,23 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        String cod, tit, gen, sinp;
-        String datos[] = new String[9];
-
-        datos[0] = cod = txtCodP.getText();
-        datos[1] = tit = txtPeli.getText();
-        datos[2] = gen = txtGen.getText();
-        datos[3] = txtFechE.getText();
-        datos[4] = sinp = txtSinp.getText();
-        datos[5] = txtFechA.getText();
-        datos[6]  = txtStock.getText();
-        datos[7]  = txtCant.getText();
-        datos[8] = txtNueStock.getText();
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        try {
-            LocalDate fechE = LocalDate.parse(txtFechE.getText(), formatter);
-            LocalDate fechA = LocalDate.parse(txtFechA.getText(), formatter);
-            int stock = Integer.parseInt(txtStock.getText());
-            int canti = Integer.parseInt(txtCant.getText());
-            int nStock = Integer.parseInt(txtNueStock.getText());
-            model.addRow(datos);
-            Pelicula peli = new Pelicula(cod, tit, gen, fechE,sinp, fechA, stock, canti, nStock);
-            array.add(peli);
-            limpiarCampos();
-            // Mostrar mensaje de éxito
-            JOptionPane.showMessageDialog(this, "La película se ha añadido correctamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-        } catch (DateTimeParseException | NumberFormatException e) {
-            // Mostrar mensaje de error si ocurre una excepción al convertir fechas o números
-            JOptionPane.showMessageDialog(this, "Error al añadir la película. Verifica los campos ingresados.", "Error", JOptionPane.ERROR_MESSAGE);
-        }
+       String cod = txtCodP.getText();
+       String tit = txtPeli.getText();
+       String gen = txtGen.getText();
+       String sinp = txtSinp.getText();
+       String Sstock = txtStock.getText();
+       int stock = Integer.parseInt(Sstock);
+       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+       LocalDate fechE = LocalDate.parse(txtFechE.getText(),formatter);
+       LocalDate fechA = LocalDate.parse(txtFechA.getText(),formatter);
+       peliCont.agregarPelicula(tblPeli, cod, tit, gen, sinp, fechE, fechA, stock);
+       limpiarCampos();
     }//GEN-LAST:event_btnGuardarActionPerformed
 
-   
-   
+    private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActionPerformed
+
+    }//GEN-LAST:event_btnMostrarActionPerformed
+
     // METODO PARA LIMPIAR TEXTFIELD
     private void limpiarCampos() {
     txtCodP.setText("");
@@ -525,25 +420,9 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
     txtSinp.setText("");
     txtFechA.setText("");
     txtStock.setText("");
-    txtCant.setText("");
-    txtNueStock.setText("");
     txtCodP.requestFocus();
 }
-    
-   
-    //BUSCAR PELICULAS 
-    public Pelicula buscar(String cod){
-        Pelicula peli;
-        for ( int i=0; i<array.size(); i++)
-        {
-            if(cod.equals(array.get(i).getCodigo()))
-            {
-                return array.get(i);
-            }
-        }
-        return null;
-    }
-        
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnActualizar;
@@ -551,6 +430,7 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnListar;
+    private javax.swing.JButton btnMostrar;
     private javax.swing.JButton btnSalir;
     private javax.swing.JTextField catalogoSearch;
     private javax.swing.JLabel jLabel20;
@@ -560,12 +440,10 @@ public class winMantenimientoPelicula extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JLabel labelInput1;
     private javax.swing.JTable tblPeli;
-    private javax.swing.JTextField txtCant;
     private javax.swing.JTextField txtCodP;
     private javax.swing.JTextField txtFechA;
     private javax.swing.JTextField txtFechE;
     private javax.swing.JTextField txtGen;
-    private javax.swing.JTextField txtNueStock;
     private javax.swing.JTextField txtPeli;
     private javax.swing.JTextField txtSinp;
     private javax.swing.JTextField txtStock;

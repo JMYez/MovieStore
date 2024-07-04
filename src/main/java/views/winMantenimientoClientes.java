@@ -337,31 +337,19 @@ public class winMantenimientoClientes extends javax.swing.JPanel {
     }//GEN-LAST:event_btnBuscActionPerformed
 
     private void btnActuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActuaActionPerformed
-        int dni = Integer.parseInt(txtDni.getText());
-        String nom = txtNom.getText();
-        String ape = txtApe.getText();
-        String direc = txtDirec.getText();
-        String telef = txtTelef.getText();
-        String corr = txtCorreo.getText();
-        try {
-            cliCont.actualizarCliente(tblClie, dni, nom, ape, direc, telef, corr);
+       try {
+            cliCont.actualizarCliente(tblClie, txtDni, txtNom, txtApe, txtDirec, txtTelef, txtCorreo);
         } catch (Exception ex) {
             Logger.getLogger(winMantenimientoClientes.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
         limpiarCampos();
     }//GEN-LAST:event_btnActuaActionPerformed
 
     private void btnElimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnElimActionPerformed
-        /*nt elim = tblClie.getSelectedRow();
-        if(elim >= 0){
-            array.remove(elim);
-            model.removeRow(elim);
-
-            JOptionPane.showMessageDialog(this,"Cliente eliminado correctamente");
-            limpiarCampos();
-        }else{
-            JOptionPane.showMessageDialog(null, "Selecciona un dato para eliminar" );
-        }*/
+        cliCont.eliminarCliente(tblClie);
+        
+        limpiarCampos();
     }//GEN-LAST:event_btnElimActionPerformed
 
     private void btnAñadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAñadirActionPerformed
@@ -372,30 +360,13 @@ public class winMantenimientoClientes extends javax.swing.JPanel {
         String tel = txtTelef.getText();
         String corr = txtCorreo.getText();
         int dni = Integer.parseInt(sDni);
-        // Llamada al controlador para agregar el cliente
-        cliCont.agregarClientes(dni, nom, ape, dir, tel,corr);
-        // Ahora actualizamos el modelo (tabla visual)
-        model.addRow(new Object[]{dni, nom, ape, dir, tel, corr});
-        // Limpiar campos después de agregar correctamente
+
+        cliCont.agregarClientes(tblClie,dni, nom, ape, dir, tel,corr);
         limpiarCampos();
     }//GEN-LAST:event_btnAñadirActionPerformed
 
     private void btnConsulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsulActionPerformed
-       /* try {
-            int dni = Integer.parseInt(txtDni.getText());
-            Cliente clie = consultar(dni);
-            if (clie != null) {
-                txtNom.setText(clie.getNombre());
-                txtApe.setText(clie.getApellidos());
-                txtDirec.setText(clie.getDireccion());
-                txtTelef.setText(clie.getTelefono());
-                txtCorreo.setText(clie.getCorreo());
-            } else {
-                JOptionPane.showMessageDialog(null, "Cliente " + dni + " No existe");
-            }
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(null, "DNI debe ser un número entero");
-        }*/
+       cliCont.consultarCliente(tblClie,txtDni, txtNom, txtApe, txtDirec, txtTelef, txtCorreo);
     }//GEN-LAST:event_btnConsulActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
@@ -420,14 +391,6 @@ public class winMantenimientoClientes extends javax.swing.JPanel {
     txtCorreo.setText("");
   
 }    
-    /*public Cliente consultar(int dni){
-        for (Cliente clie : array) {
-            if (clie.getDni() == dni) {
-                return clie;
-            }
-        }
-        return null;
-    }*/
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;

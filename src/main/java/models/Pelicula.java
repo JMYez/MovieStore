@@ -7,26 +7,22 @@ public class Pelicula {
     public String codigo;
     public String titulo;
     public String genero;
-    public LocalDate  fechaEstreno;
     public String sinopsis;
+    public LocalDate  fechaEstreno;
     public LocalDate  fechaAgregacion;
     public int stock;
-    public int cantidad;
-    public int nueStock;
 
     public Pelicula() {
     }
 
-    public Pelicula(String codigo, String titulo, String genero, LocalDate fechaEstreno, String sinopsis, LocalDate fechaAgregacion, int stock, int cantidad, int nueStock) {
+    public Pelicula(String codigo, String titulo, String genero,  String sinopsis, LocalDate fechaEstreno, LocalDate fechaAgregacion, int stock) {
         this.codigo = codigo;
         this.titulo = titulo;
         this.genero = genero;
-        this.fechaEstreno = fechaEstreno;
         this.sinopsis = sinopsis;
+        this.fechaEstreno = fechaEstreno;
         this.fechaAgregacion = fechaAgregacion;
         this.stock = stock;
-        this.cantidad = cantidad;
-        this.nueStock = nueStock;
     }
 
     public String getCodigo() {
@@ -53,6 +49,14 @@ public class Pelicula {
         this.genero = genero;
     }
 
+    public String getSinopsis() {
+        return sinopsis;
+    }
+
+    public void setSinopsis(String sinopsis) {
+        this.sinopsis = sinopsis;
+    }
+
     public LocalDate getFechaEstreno() {
         return fechaEstreno;
     }
@@ -63,14 +67,6 @@ public class Pelicula {
 
     public LocalDate getFechaAgregacion() {
         return fechaAgregacion;
-    }
-    
-    public String getSinopsis() {
-        return sinopsis;
-    }
-
-    public void setSinopsis(String sinopsis) {
-        this.sinopsis = sinopsis;
     }
 
     public void setFechaAgregacion(LocalDate fechaAgregacion) {
@@ -84,21 +80,4 @@ public class Pelicula {
     public void setStock(int stock) {
         this.stock = stock;
     }
-
-    public int getCantidad() {
-        return cantidad;
-    }
-
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
-    }
-
-    public int getNueStock() {
-        return nueStock;
-    }
-
-    public void setNueStock(int nueStock) {
-        this.nueStock = nueStock;
-    }
-    
 }
