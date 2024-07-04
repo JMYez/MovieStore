@@ -26,64 +26,97 @@ public class winAlquileresRealizados extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanelContenedorOpcions = new javax.swing.JPanel();
         jPanelHeader = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         jPanelTittle = new javax.swing.JPanel();
-        jLabelTittle = new javax.swing.JLabel();
+        jPanelContenedorOpcions = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jTextField1 = new javax.swing.JTextField();
 
-        jPanelContenedorOpcions.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout jPanelContenedorOpcionsLayout = new javax.swing.GroupLayout(jPanelContenedorOpcions);
-        jPanelContenedorOpcions.setLayout(jPanelContenedorOpcionsLayout);
-        jPanelContenedorOpcionsLayout.setHorizontalGroup(
-            jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 865, Short.MAX_VALUE)
-        );
-        jPanelContenedorOpcionsLayout.setVerticalGroup(
-            jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 586, Short.MAX_VALUE)
-        );
-
+        jPanelHeader.setBackground(new java.awt.Color(255, 255, 255));
         jPanelHeader.setLayout(new java.awt.BorderLayout());
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator1.setForeground(new java.awt.Color(21, 100, 192));
         jPanelHeader.add(jSeparator1, java.awt.BorderLayout.PAGE_END);
 
-        jLabelTittle.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabelTittle.setText("ALQUILERES REALIZADOS");
-
         javax.swing.GroupLayout jPanelTittleLayout = new javax.swing.GroupLayout(jPanelTittle);
         jPanelTittle.setLayout(jPanelTittleLayout);
         jPanelTittleLayout.setHorizontalGroup(
             jPanelTittleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTittleLayout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
-                .addComponent(jLabelTittle, javax.swing.GroupLayout.PREFERRED_SIZE, 745, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGap(0, 766, Short.MAX_VALUE)
         );
         jPanelTittleLayout.setVerticalGroup(
             jPanelTittleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelTittleLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(jLabelTittle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 52, Short.MAX_VALUE)
         );
 
         jPanelHeader.add(jPanelTittle, java.awt.BorderLayout.LINE_START);
+
+        jPanelContenedorOpcions.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTable1.setBackground(new java.awt.Color(0, 0, 0));
+        jTable1.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        jTable1.setForeground(new java.awt.Color(255, 0, 0));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"1", "Alfredo Sthefano", "Diaz Vasquez", "12345678", "UTP sede Centro", "958302198"},
+                {"2", "María", "Sánchez	", "01234567O	", "Calle de los Sueños 456	", "600-555-666 "},
+                {"3", "Pablo", "Martínez	", "01234567T	", "Avenida de las Miradas 901	", "600-000-111 "},
+                {"4", "Elena	", "Diaz", "89012345S	", "Paseo de los Recuerdos 678	", "600-999-000 "},
+                {"5", "Daniel", "Fernández	", "23456789P	", "Paseo de los Susurros 789	", "600-666-777 "},
+                {"6", "Jorge	", "Sánchez", "01234567O	", "Calle de los Sueños 456	", "600-555-666 "},
+                {"7", "Sofía	", "Fernández	", "45678901G	", "Calle de las Quimeras 789	", "600-789-012 "},
+                {"8", "Diego	", "López", "45678901L	", "Calle de las Sombras 567	", "600-222-333 "},
+                {"9", "Ana	", "Martínez	", "23456789K	", "Avenida del Sol Poniente 234	", "600-111-222 "},
+                {"10", "Sthefano", "Roman", "22398102D", "Jiron Velarde 113", "601-212-045 "}
+            },
+            new String [] {
+                "Codigo del cliente", "Nombres", "Apellidos", "DNI", "Direccion", "Telefono"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jTable1.setToolTipText("aaaa");
+        jScrollPane1.setViewportView(jTable1);
+
+        javax.swing.GroupLayout jPanelContenedorOpcionsLayout = new javax.swing.GroupLayout(jPanelContenedorOpcions);
+        jPanelContenedorOpcions.setLayout(jPanelContenedorOpcionsLayout);
+        jPanelContenedorOpcionsLayout.setHorizontalGroup(
+            jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 987, Short.MAX_VALUE)
+        );
+        jPanelContenedorOpcionsLayout.setVerticalGroup(
+            jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelContenedorOpcionsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField1.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(255, 0, 0));
+        jTextField1.setText("ALQUILERES REALIZADOS");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelHeader, javax.swing.GroupLayout.DEFAULT_SIZE, 865, Short.MAX_VALUE)
             .addComponent(jPanelContenedorOpcions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jTextField1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanelHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanelContenedorOpcions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -91,10 +124,12 @@ public class winAlquileresRealizados extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabelTittle;
     private javax.swing.JPanel jPanelContenedorOpcions;
     private javax.swing.JPanel jPanelHeader;
     private javax.swing.JPanel jPanelTittle;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
