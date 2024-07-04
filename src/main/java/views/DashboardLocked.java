@@ -79,7 +79,7 @@ appName.setForeground(color);
         btnwinProcesos = new javax.swing.JButton();
         btnwinMantenimiento = new javax.swing.JButton();
         btnCerrarSesion = new javax.swing.JButton();
-        btnwinMantenimiento1 = new javax.swing.JButton();
+        btnwinReportes = new javax.swing.JButton();
         header = new javax.swing.JPanel();
         navText = new javax.swing.JLabel();
         dateText = new javax.swing.JLabel();
@@ -202,19 +202,19 @@ appName.setForeground(color);
             }
         });
 
-        btnwinMantenimiento1.setBackground(new java.awt.Color(0, 0, 0));
-        btnwinMantenimiento1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnwinMantenimiento1.setForeground(new java.awt.Color(102, 102, 102));
-        btnwinMantenimiento1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/file-chart.png"))); // NOI18N
-        btnwinMantenimiento1.setText("Reportes");
-        btnwinMantenimiento1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
-        btnwinMantenimiento1.setBorderPainted(false);
-        btnwinMantenimiento1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnwinMantenimiento1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        btnwinMantenimiento1.setIconTextGap(10);
-        btnwinMantenimiento1.addActionListener(new java.awt.event.ActionListener() {
+        btnwinReportes.setBackground(new java.awt.Color(0, 0, 0));
+        btnwinReportes.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnwinReportes.setForeground(new java.awt.Color(102, 102, 102));
+        btnwinReportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/file-chart.png"))); // NOI18N
+        btnwinReportes.setText("Reportes");
+        btnwinReportes.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 10, 1, 1, new java.awt.Color(0, 0, 0)));
+        btnwinReportes.setBorderPainted(false);
+        btnwinReportes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnwinReportes.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnwinReportes.setIconTextGap(10);
+        btnwinReportes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnwinMantenimiento1ActionPerformed(evt);
+                btnwinReportesActionPerformed(evt);
             }
         });
 
@@ -236,7 +236,7 @@ appName.setForeground(color);
                     .addComponent(btnwinProcesos, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnwinMantenimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnwinMantenimiento1, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnwinReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         menuLayout.setVerticalGroup(
@@ -257,7 +257,7 @@ appName.setForeground(color);
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnwinMantenimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnwinMantenimiento1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnwinReportes, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -438,9 +438,9 @@ appName.setForeground(color);
         this.dispose();
     }//GEN-LAST:event_btnCerrarSesionActionPerformed
 
-    private void btnwinMantenimiento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnwinMantenimiento1ActionPerformed
+    private void btnwinReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnwinReportesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnwinMantenimiento1ActionPerformed
+    }//GEN-LAST:event_btnwinReportesActionPerformed
 
     public static void main(String args[]) {
     FlatMaterialLighterIJTheme.setup();
@@ -461,8 +461,8 @@ appName.setForeground(color);
     private javax.swing.JButton btnwinCatalogoPeliculas;
     private javax.swing.JButton btnwinInicio;
     private javax.swing.JButton btnwinMantenimiento;
-    private javax.swing.JButton btnwinMantenimiento1;
     private javax.swing.JButton btnwinProcesos;
+    private javax.swing.JButton btnwinReportes;
     private javax.swing.JButton btnwinUsuarios;
     private javax.swing.JPanel content;
     private javax.swing.JLabel dateText;

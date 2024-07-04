@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPanel" name="jPanelHeader">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JSeparator" name="jSeparator1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="c0" green="64" red="15" type="rgb"/>
+            </Property>
+          </Properties>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+              <BorderConstraints direction="Last"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Container class="javax.swing.JPanel" name="jPanelTittle">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+              <BorderConstraints direction="Before"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="766" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <EmptySpace min="0" pref="52" max="32767" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+        </Container>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanelContenedorOpcions" max="32767" attributes="0"/>
+          <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jTextField1" min="-2" pref="69" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanelContenedorOpcions" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanelContenedorOpcions">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jScrollPane1" alignment="0" pref="987" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="419" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="jTable1">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="0" type="rgb"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI Black" size="14" style="0"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="0" green="0" red="ff" type="rgb"/>
+                </Property>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="6" rowCount="10">
+                    <Column editable="true" title="Codigo del cliente" type="java.lang.String">
+                      <Data value="1"/>
+                      <Data value="2"/>
+                      <Data value="3"/>
+                      <Data value="4"/>
+                      <Data value="5"/>
+                      <Data value="6"/>
+                      <Data value="7"/>
+                      <Data value="8"/>
+                      <Data value="9"/>
+                      <Data value="10"/>
+                    </Column>
+                    <Column editable="true" title="Nombres" type="java.lang.String">
+                      <Data value="Alfredo Sthefano"/>
+                      <Data value="Mar&#xed;a"/>
+                      <Data value="Pablo"/>
+                      <Data value="Elena&#x9;"/>
+                      <Data value="Daniel"/>
+                      <Data value="Jorge&#x9;"/>
+                      <Data value="Sof&#xed;a&#x9;"/>
+                      <Data value="Diego&#x9;"/>
+                      <Data value="Ana&#x9;"/>
+                      <Data value="Sthefano"/>
+                    </Column>
+                    <Column editable="true" title="Apellidos" type="java.lang.String">
+                      <Data value="Diaz Vasquez"/>
+                      <Data value="S&#xe1;nchez&#x9;"/>
+                      <Data value="Mart&#xed;nez&#x9;"/>
+                      <Data value="Diaz"/>
+                      <Data value="Fern&#xe1;ndez&#x9;"/>
+                      <Data value="S&#xe1;nchez"/>
+                      <Data value="Fern&#xe1;ndez&#x9;"/>
+                      <Data value="L&#xf3;pez"/>
+                      <Data value="Mart&#xed;nez&#x9;"/>
+                      <Data value="Roman"/>
+                    </Column>
+                    <Column editable="true" title="DNI" type="java.lang.String">
+                      <Data value="12345678"/>
+                      <Data value="01234567O&#x9;"/>
+                      <Data value="01234567T&#x9;"/>
+                      <Data value="89012345S&#x9;"/>
+                      <Data value="23456789P&#x9;"/>
+                      <Data value="01234567O&#x9;"/>
+                      <Data value="45678901G&#x9;"/>
+                      <Data value="45678901L&#x9;"/>
+                      <Data value="23456789K&#x9;"/>
+                      <Data value="22398102D"/>
+                    </Column>
+                    <Column editable="true" title="Direccion" type="java.lang.String">
+                      <Data value="UTP sede Centro"/>
+                      <Data value="Calle de los Sue&#xf1;os 456&#x9;"/>
+                      <Data value="Avenida de las Miradas 901&#x9;"/>
+                      <Data value="Paseo de los Recuerdos 678&#x9;"/>
+                      <Data value="Paseo de los Susurros 789&#x9;"/>
+                      <Data value="Calle de los Sue&#xf1;os 456&#x9;"/>
+                      <Data value="Calle de las Quimeras 789&#x9;"/>
+                      <Data value="Calle de las Sombras 567&#x9;"/>
+                      <Data value="Avenida del Sol Poniente 234&#x9;"/>
+                      <Data value="Jiron Velarde 113"/>
+                    </Column>
+                    <Column editable="true" title="Telefono" type="java.lang.String">
+                      <Data value="958302198"/>
+                      <Data value="600-555-666 "/>
+                      <Data value="600-000-111 "/>
+                      <Data value="600-999-000 "/>
+                      <Data value="600-666-777 "/>
+                      <Data value="600-555-666 "/>
+                      <Data value="600-789-012 "/>
+                      <Data value="600-222-333 "/>
+                      <Data value="600-111-222 "/>
+                      <Data value="601-212-045 "/>
+                    </Column>
+                  </Table>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value="aaaa"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JTextField" name="jTextField1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI Black" size="24" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="ALQUILERES REALIZADOS"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
