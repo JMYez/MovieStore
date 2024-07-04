@@ -24,7 +24,7 @@ public class winMantenimiento extends javax.swing.JPanel {
         jLabel9.setOpaque(false);*/
     }
     
-    private void ShowJPanel(JPanel p){
+    public void ShowJPanel(JPanel p){
         p.setSize(780, 430);
         p.setLocation(0,0);
 

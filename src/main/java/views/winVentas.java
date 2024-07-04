@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package com.mycompany.views;
+package views;
 
 /**
  *
@@ -161,7 +161,7 @@ public class winVentas extends javax.swing.JPanel {
         );
 
         add(jPanelContenedorOpcions);
-        jPanelContenedorOpcions.setBounds(0, 6, 877, 653);
+        jPanelContenedorOpcions.setBounds(0, 6, 0, 0);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
