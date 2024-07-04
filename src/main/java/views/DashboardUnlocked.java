@@ -439,7 +439,7 @@ appName.setForeground(color);
     }//GEN-LAST:event_btnCerrarSesionActionPerformed
 
     private void btnwinReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnwinReportesActionPerformed
-        ShowJPanel(new winReportes());
+        ShowJPanel(new winReporte());
         if (!btnwinReportes.isEnabled()) {
         btnwinReportes.setEnabled(true);
         
