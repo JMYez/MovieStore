@@ -66,14 +66,35 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Component id="jPanelContenedorOpcions" max="32767" attributes="0"/>
           <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <Component id="btnFiltrarFecha" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+              <Component id="btnFiltrarNombre" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+              <Component id="btnFiltrarApellido" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="btnFiltrarVenta" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="119" max="-2" attributes="0"/>
+              <Component id="btnFiltrarCodigo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="jTextField1" min="-2" pref="69" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanelContenedorOpcions" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnFiltrarFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnFiltrarNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnFiltrarApellido" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnFiltrarVenta" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnFiltrarCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="jPanelContenedorOpcions" min="-2" pref="396" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -89,7 +110,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jScrollPane1" alignment="0" pref="987" max="32767" attributes="0"/>
+              <Component id="jScrollPane1" alignment="0" pref="1026" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -217,6 +238,46 @@
         </Property>
         <Property name="text" type="java.lang.String" value="ALQUILERES REALIZADOS"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFiltrarFecha">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Filtrar fecha"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFiltrarFechaActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFiltrarNombre">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Filtrar nombre"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFiltrarNombreActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFiltrarApellido">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Filtrar apellido"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFiltrarApellidoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFiltrarVenta">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Filtrar venta"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFiltrarVentaActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnFiltrarCodigo">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Filtrar codigo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFiltrarCodigoActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

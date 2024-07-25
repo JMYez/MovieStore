@@ -4,18 +4,21 @@
  */
 package views;
 
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author ingje
  */
+    
 public class winAlquileresRealizados extends javax.swing.JPanel {
-
-    /**
-     * Creates new form winDisponiblesAlquiler
-     */
-    public winAlquileresRealizados() {
+ private AlquileresController controller = new AlquileresController();
+ public winAlquileresRealizados() {
         initComponents();
+        cargarDatos(); // Carga los datos iniciales
     }
+    
 
    
 
@@ -37,6 +40,11 @@ public class winAlquileresRealizados extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jTextField1 = new javax.swing.JTextField();
+        btnFiltrarFecha = new javax.swing.JButton();
+        btnFiltrarNombre = new javax.swing.JButton();
+        btnFiltrarApellido = new javax.swing.JButton();
+        btnFiltrarVenta = new javax.swing.JButton();
+        btnFiltrarCodigo = new javax.swing.JButton();
 
         jPanelHeader.setBackground(new java.awt.Color(255, 255, 255));
         jPanelHeader.setLayout(new java.awt.BorderLayout());
@@ -95,7 +103,7 @@ public class winAlquileresRealizados extends javax.swing.JPanel {
         jPanelContenedorOpcions.setLayout(jPanelContenedorOpcionsLayout);
         jPanelContenedorOpcionsLayout.setHorizontalGroup(
             jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 987, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1026, Short.MAX_VALUE)
         );
         jPanelContenedorOpcionsLayout.setVerticalGroup(
             jPanelContenedorOpcionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,24 +118,111 @@ public class winAlquileresRealizados extends javax.swing.JPanel {
         jTextField1.setForeground(new java.awt.Color(255, 0, 0));
         jTextField1.setText("ALQUILERES REALIZADOS");
 
+        btnFiltrarFecha.setText("Filtrar fecha");
+        btnFiltrarFecha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFiltrarFechaActionPerformed(evt);
+            }
+        });
+
+        btnFiltrarNombre.setText("Filtrar nombre");
+        btnFiltrarNombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFiltrarNombreActionPerformed(evt);
+            }
+        });
+
+        btnFiltrarApellido.setText("Filtrar apellido");
+        btnFiltrarApellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFiltrarApellidoActionPerformed(evt);
+            }
+        });
+
+        btnFiltrarVenta.setText("Filtrar venta");
+        btnFiltrarVenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFiltrarVentaActionPerformed(evt);
+            }
+        });
+
+        btnFiltrarCodigo.setText("Filtrar codigo");
+        btnFiltrarCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFiltrarCodigoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanelContenedorOpcions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jTextField1)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(btnFiltrarFecha)
+                .addGap(60, 60, 60)
+                .addComponent(btnFiltrarNombre)
+                .addGap(81, 81, 81)
+                .addComponent(btnFiltrarApellido)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnFiltrarVenta)
+                .addGap(119, 119, 119)
+                .addComponent(btnFiltrarCodigo)
+                .addGap(121, 121, 121))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelContenedorOpcions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnFiltrarFecha)
+                    .addComponent(btnFiltrarNombre)
+                    .addComponent(btnFiltrarApellido)
+                    .addComponent(btnFiltrarVenta)
+                    .addComponent(btnFiltrarCodigo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanelContenedorOpcions, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnFiltrarFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFiltrarFechaActionPerformed
+        String fecha = JOptionPane.showInputDialog("Ingrese la fecha (YYYY-MM-DD):");
+        DefaultTableModel model = controller.getAlquileres("fecha", fecha);
+        jTable1.setModel(model);
+    }//GEN-LAST:event_btnFiltrarFechaActionPerformed
+
+    private void btnFiltrarVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFiltrarVentaActionPerformed
+        String venta = JOptionPane.showInputDialog("Ingrese el valor de la venta:");
+        DefaultTableModel model = controller.getAlquileres("venta", venta);
+        jTable1.setModel(model);
+    }//GEN-LAST:event_btnFiltrarVentaActionPerformed
+
+    private void btnFiltrarApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFiltrarApellidoActionPerformed
+String apellido = JOptionPane.showInputDialog("Ingrese el apellido:");
+        DefaultTableModel model = controller.getAlquileres("apellido", apellido);
+        jTable1.setModel(model);    }//GEN-LAST:event_btnFiltrarApellidoActionPerformed
+
+    private void btnFiltrarCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFiltrarCodigoActionPerformed
+        String codigo = JOptionPane.showInputDialog("Ingrese el código del cliente:");
+        DefaultTableModel model = controller.getAlquileres("codigo", codigo);
+        jTable1.setModel(model);
+    }//GEN-LAST:event_btnFiltrarCodigoActionPerformed
+
+    private void btnFiltrarNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFiltrarNombreActionPerformed
+ String nombre = JOptionPane.showInputDialog("Ingrese el nombre:");
+        DefaultTableModel model = controller.getAlquileres("nombre", nombre);
+        jTable1.setModel(model);    }//GEN-LAST:event_btnFiltrarNombreActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnFiltrarApellido;
+    private javax.swing.JButton btnFiltrarCodigo;
+    private javax.swing.JButton btnFiltrarFecha;
+    private javax.swing.JButton btnFiltrarNombre;
+    private javax.swing.JButton btnFiltrarVenta;
     private javax.swing.JPanel jPanelContenedorOpcions;
     private javax.swing.JPanel jPanelHeader;
     private javax.swing.JPanel jPanelTittle;
@@ -136,4 +231,10 @@ public class winAlquileresRealizados extends javax.swing.JPanel {
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
-}
+
+    private void cargarDatos() {
+         DefaultTableModel model = controller.getAlquileres(null, null); // Carga todos los datos
+        jTable1.setModel(model);
+    }
+    }
+
